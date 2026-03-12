@@ -15,7 +15,9 @@
 - Standard Vite React template structure.
 - Dependencies installed and verified.
 - Implemented placeholder page with "ALENA KRACHKOVSKAIA" centered using Rethink Sans font.
+- Updated styling: background color #0600dc, font size 160pt, tracking +1%, and text moved to the top.
 - Integrated Google Fonts (Rethink Sans).
 - Configured CI/CD with GitHub Actions for deployment to GitHub Pages.
-- Merged initial setup to `main`.
+- Merged initial setup and subsequent styling updates to `main`.
+
 
