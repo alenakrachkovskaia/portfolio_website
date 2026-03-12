@@ -16,4 +16,6 @@
 - Dependencies installed and verified.
 - Implemented placeholder page with "ALENA KRACHKOVSKAIA" centered using Rethink Sans font.
 - Integrated Google Fonts (Rethink Sans).
+- Configured CI/CD with GitHub Actions for deployment to GitHub Pages.
+- Merged initial setup to `main`.
 
