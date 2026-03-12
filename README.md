@@ -1,1 +1,1 @@
-# portfolio_website
+# © Alena Krachkovskaia, all rights reserved.
