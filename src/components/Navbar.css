@@ -10,7 +10,7 @@
 
 .nav-item-container {
   position: absolute;
-  bottom: 27px; /* Positioned so text bottom (approx) has 1px gap to dot */
+  bottom: 27px; /* Text bottom */
   pointer-events: auto;
   display: flex;
   flex-direction: column;
@@ -41,23 +41,30 @@
   text-decoration: none;
   transition: color 0.2s ease;
   white-space: nowrap;
-  line-height: 1; /* Ensure tight bounding box for 1px gap calculation */
+  line-height: 1;
 }
 
 .nav-text-link:hover {
   color: var(--GREY);
 }
 
+/* Uniform DOT coordinates: all dots will have their bottom at 18px from the screen */
 .nav-dot {
   position: absolute;
-  bottom: -7px; /* 1px gap + 6px dot height = 7px below container bottom */
   width: 6px;
   height: 6px;
   background-color: var(--BLACK);
   border-radius: 50%;
+  /* For text at bottom: 27px, dot bottom is at -9px to reach screen-bottom 18px */
+  bottom: -9px; 
 }
 
-/* SVG 2px closer to the bottom than the text */
+/* SVG 2px closer to the bottom than the text (bottom: 25px) */
 .nav-item-container[style*="left: 663px"] {
   bottom: 25px;
+}
+
+/* For logo at bottom: 25px, dot bottom is at -7px to reach screen-bottom 18px */
+.nav-item-container[style*="left: 663px"] .nav-dot {
+  bottom: -7px;
 }
