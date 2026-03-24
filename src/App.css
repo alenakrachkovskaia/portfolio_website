@@ -12,7 +12,7 @@
 
 .main-image {
   position: absolute;
-  left: -28.2%;
+  left: -160px;
   top: 156px;
 }
 
@@ -25,7 +25,7 @@
   font-weight: 300;
   font-size: 36px;
   line-height: 45px;
-  text-indent: 20%;
+  text-indent: 120px;
   color: var(--BLACK);
   margin: 0;
 }
