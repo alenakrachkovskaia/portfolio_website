@@ -78,7 +78,7 @@ export default function Main() {
           className="main-image"
         />
         <p className="main-text">
-          lena Krachkovskaia is a multidisciplinary designer with a wide range of skills: from typography and branding to media production. Her favorite things in design process are drawing letters and calculating grids.
+          lena Krachkovskaia is a multidisciplinary designer and art director with a wide range of skills: from typography and branding to media production. Her favorite things in design process are drawing letters and calculating grids.
         </p>
       </div>
     </div>

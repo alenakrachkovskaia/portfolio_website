@@ -13,19 +13,19 @@
 .main-image {
   position: absolute;
   left: -150px;
-  top: calc(3 / 14 * 100vh);
+  top: calc(2 / 20 * 100vh);
 }
 
 .main-text {
   position: absolute;
   left: 0;
-  top: calc(29 / 70 * 100vh); /* image top (3/14 vh) + 1/5 vh */
+  top: calc(21 / 70 * 100vh);
   width: 100%;
   font-family: 'Montagu Slab', serif;
   font-weight: 300;
   font-size: 36px;
   line-height: 45px;
-  text-indent: 130px;
+  text-indent: 140px;
   color: var(--BLACK);
   margin: 0;
 }
