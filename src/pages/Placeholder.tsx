@@ -1,7 +1,7 @@
 export default function Placeholder({ title }: { title: string }) {
   return (
     <div className="main-container">
-      <h1 className="placeholder-title" style={{ position: 'absolute', left: '665px', top: '338px', fontFamily: 'Montagu Slab', fontWeight: 300, fontSize: '36px', color: 'var(--BLACK)' }}>
+      <h1 className="placeholder-title">
         {title}
       </h1>
     </div>

@@ -30,6 +30,17 @@
   margin: 0;
 }
 
+.placeholder-title {
+  position: absolute;
+  left: 665px;
+  top: 338px;
+  font-family: 'Montagu Slab', serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: var(--BLACK);
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .main-container {
     grid-template-columns: 1fr;
