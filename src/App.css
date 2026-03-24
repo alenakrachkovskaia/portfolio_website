@@ -1,26 +1,49 @@
 .main-container {
-  position: relative;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr var(--content-width) 1fr;
   height: 100vh;
   background-color: var(--WHITE);
 }
 
+.main-content {
+  grid-column: 2;
+  position: relative;
+}
+
 .main-image {
   position: absolute;
-  left: 498px;
+  left: -28.2%;
   top: 156px;
 }
 
 .main-text {
   position: absolute;
-  left: 665px;
+  left: 0;
   top: 338px;
-  width: 592px;
+  width: 100%;
   font-family: 'Montagu Slab', serif;
   font-weight: 300;
   font-size: 36px;
   line-height: 45px;
-  text-indent: 120px;
+  text-indent: 20%;
   color: var(--BLACK);
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    grid-column: 1;
+  }
+
+  .main-image {
+    left: 0;
+  }
+
+  .main-text {
+    text-indent: 280px;
+  }
 }
