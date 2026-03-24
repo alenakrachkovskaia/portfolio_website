@@ -33,6 +33,7 @@
 @media (max-width: 768px) {
   .main-container {
     grid-template-columns: 1fr;
+    overflow: hidden;
   }
 
   .main-content {
@@ -48,8 +49,9 @@
   .main-text {
     left: 20px;
     width: calc(100% - 40px);
-    font-size: 27px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 31px;
     text-indent: 196px;
+    top: calc(16.8 / 70 * 100vh);
   }
 }
