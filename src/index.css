@@ -1,11 +1,14 @@
 :root {
+  --WHITE: #F8F8F8;
+  --BLACK: #212121;
+  --GREY: #777777;
   font-family: 'Rethink Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: dark;
-  color: white;
-  background-color: #0600dc;
+  color-scheme: light;
+  color: var(--BLACK);
+  background-color: var(--WHITE);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,8 +18,6 @@
 
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }

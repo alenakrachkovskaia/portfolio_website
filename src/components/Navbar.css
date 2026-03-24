@@ -1,0 +1,63 @@
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.nav-item-container {
+  position: absolute;
+  bottom: 27px; /* Positioned so text bottom (approx) has 1px gap to dot */
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-logo-link {
+  display: block;
+  height: 27px;
+}
+
+.nav-logo {
+  width: 27px;
+  height: 27px;
+  filter: brightness(0) saturate(100%) invert(8%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(97%) contrast(92%); /* BLACK #212121 */
+  transition: filter 0.2s ease;
+}
+
+.nav-logo-link:hover .nav-logo {
+  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(91%) contrast(91%); /* GREY #777777 */
+}
+
+.nav-text-link {
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--BLACK);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  line-height: 1; /* Ensure tight bounding box for 1px gap calculation */
+}
+
+.nav-text-link:hover {
+  color: var(--GREY);
+}
+
+.nav-dot {
+  position: absolute;
+  bottom: -7px; /* 1px gap + 6px dot height = 7px below container bottom */
+  width: 6px;
+  height: 6px;
+  background-color: var(--BLACK);
+  border-radius: 50%;
+}
+
+/* SVG 2px closer to the bottom than the text */
+.nav-item-container[style*="left: 663px"] {
+  bottom: 25px;
+}
