@@ -49,9 +49,18 @@
   .main-text {
     left: 20px;
     width: calc(100% - 40px);
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 22px;
+    line-height: 28px;
     text-indent: 196px;
     top: calc(16.8 / 70 * 100vh);
+  }
+
+  .placeholder-title {
+    position: static;
+    padding: 20px;
+    font-family: 'Montagu Slab', serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: var(--BLACK);
   }
 }
