@@ -82,21 +82,30 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    bottom: auto;
+  }
+
   .navbar-inner {
     width: calc(100% - 40px);
-    padding-bottom: 20px;
+    padding-bottom: 26px;
   }
 
   .nav-text-link {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .nav-logo-link {
-    height: 16px;
+    height: 20px;
   }
 
   .nav-logo {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-item-container:first-child {
+    margin-bottom: 2px;
   }
 }
