@@ -6,15 +6,31 @@
   height: 100px;
   pointer-events: none;
   z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.navbar-inner {
+  width: var(--content-width);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 27px;
+  pointer-events: auto;
 }
 
 .nav-item-container {
-  position: absolute;
-  bottom: 27px; /* Text bottom */
-  pointer-events: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+/* Logo sits 2px lower than text items */
+.nav-item-container:first-child {
+  margin-bottom: -2px;
 }
 
 .nav-logo-link {
@@ -25,12 +41,12 @@
 .nav-logo {
   width: 27px;
   height: 27px;
-  filter: brightness(0) saturate(100%) invert(8%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(97%) contrast(92%); /* BLACK #212121 */
+  filter: brightness(0) saturate(100%) invert(8%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(97%) contrast(92%);
   transition: filter 0.2s ease;
 }
 
 .nav-logo-link:hover .nav-logo {
-  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(91%) contrast(91%); /* GREY #777777 */
+  filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(91%) contrast(91%);
 }
 
 .nav-text-link {
@@ -48,23 +64,30 @@
   color: var(--GREY);
 }
 
-/* Uniform DOT coordinates: all dots will have their bottom at 18px from the screen */
+/* Dot: bottom edge sits 18px from screen bottom for all items */
 .nav-dot {
   position: absolute;
   width: 6px;
   height: 6px;
   background-color: var(--BLACK);
   border-radius: 50%;
-  /* For text at bottom: 27px, dot bottom is at -9px to reach screen-bottom 18px */
-  bottom: -9px; 
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* SVG 2px closer to the bottom than the text (bottom: 25px) */
-.nav-item-container[style*="left: 663px"] {
-  bottom: 25px;
-}
-
-/* For logo at bottom: 25px, dot bottom is at -7px to reach screen-bottom 18px */
-.nav-item-container[style*="left: 663px"] .nav-dot {
+/* Logo is 2px lower, so dot needs 2px less offset to reach same screen position */
+.nav-item-container:first-child .nav-dot {
   bottom: -7px;
+}
+
+@media (max-width: 768px) {
+  .navbar-inner {
+    width: calc(100% - 40px);
+    padding-bottom: 20px;
+  }
+
+  .nav-text-link {
+    font-size: 14px;
+  }
 }
