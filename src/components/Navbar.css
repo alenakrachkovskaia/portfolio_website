@@ -90,4 +90,13 @@
   .nav-text-link {
     font-size: 14px;
   }
+
+  .nav-logo-link {
+    height: 23px;
+  }
+
+  .nav-logo {
+    width: 23px;
+    height: 23px;
+  }
 }
