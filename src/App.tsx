@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
-      <div className="app-wrapper">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/projects" element={<Placeholder title="PROJECTS" />} />
@@ -20,8 +20,6 @@ function App() {
         <Route path="/book" element={<Placeholder title="BOOK" />} />
         <Route path="*" element={<Main />} />
       </Routes>
-      <Navbar />
-      </div>
     </Router>
   )
 }
