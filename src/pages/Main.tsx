@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 
 // Importing all images in the folder
-const images = Object.values(import.meta.glob('../assets/letters/*.png', { eager: true, as: 'url' }))
+const modules = import.meta.glob('../assets/letters/*.png', { eager: true, as: 'url' })
+const images = Object.values(modules) as string[]
 
 export default function Main() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
