@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 
-// Importing all images in the folder
-const modules = import.meta.glob('../assets/letters/*.png', { eager: true, as: 'url' })
-const images = Object.values(modules) as string[]
+// Using public folder paths, which are static
+const letterImages = [
+  '1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', 
+  '9.png', '10.png', '11.png', '12.png', '13.png', '14.png', '15.png', '16.png'
+].map(name => `${import.meta.env.BASE_URL}letters/${name}`)
 
 export default function Main() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -19,7 +21,7 @@ export default function Main() {
       
       if (newTotalDistance >= 100) {
         // Swap to random image
-        const randomIndex = Math.floor(Math.random() * images.length)
+        const randomIndex = Math.floor(Math.random() * letterImages.length)
         setCurrentImageIndex(randomIndex)
         setTotalDistance(0)
       } else {
@@ -36,7 +38,7 @@ export default function Main() {
   return (
     <div className="main-container">
       <img 
-        src={images[currentImageIndex] as string} 
+        src={letterImages[currentImageIndex]} 
         alt="Animated Design" 
         className="main-image" 
       />
