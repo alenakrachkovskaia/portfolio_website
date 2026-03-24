@@ -13,13 +13,13 @@
 .main-image {
   position: absolute;
   left: -150px;
-  top: 156px;
+  top: calc(3 / 14 * 100vh);
 }
 
 .main-text {
   position: absolute;
   left: 0;
-  top: 338px;
+  top: calc(29 / 70 * 100vh); /* image top (3/14 vh) + 1/5 vh */
   width: 100%;
   font-family: 'Montagu Slab', serif;
   font-weight: 300;
