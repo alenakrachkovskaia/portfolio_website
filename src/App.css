@@ -31,17 +31,10 @@
 }
 
 @media (max-width: 768px) {
-  .app-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
   .main-container {
     grid-template-columns: 1fr;
     overflow: hidden;
-    flex: 1;
-    height: auto;
+    height: 100vh;
   }
 
   .main-content {

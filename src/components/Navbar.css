@@ -83,8 +83,9 @@
 
 @media (max-width: 768px) {
   .navbar {
-    position: relative;
-    bottom: auto;
+    position: fixed;
+    bottom: 0;
+    height: auto;
   }
 
   .navbar-inner {
