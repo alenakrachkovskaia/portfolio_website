@@ -6,8 +6,9 @@ const letterImages = [
   '9.png', '10.png', '11.png', '12.png', '13.png', '14.png', '15.png', '16.png'
 ].map(name => `${import.meta.env.BASE_URL}letters/${name}`)
 
-// Swap image every 7% of viewport width of mouse travel
+// Swap image every 7% of viewport width of mouse travel (15% for touch)
 const MOUSE_THRESHOLD_VW = 0.07
+const TOUCH_THRESHOLD_VW = 0.15
 
 export default function Main() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -30,7 +31,7 @@ export default function Main() {
       const dy = touch.clientY - lastTouchPos.y
       touchDistance += Math.sqrt(dx * dx + dy * dy)
 
-      if (touchDistance >= window.innerWidth * MOUSE_THRESHOLD_VW) {
+      if (touchDistance >= window.innerWidth * TOUCH_THRESHOLD_VW) {
         setCurrentImageIndex(Math.floor(Math.random() * letterImages.length))
         touchDistance = 0
       }
