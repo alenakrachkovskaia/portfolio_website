@@ -1,14 +1,14 @@
-/* ── 1-COL BASE (all widths; overridden below for larger viewports) ── */
+/* ── BASE 2-MODULE (all widths; overridden below for larger viewports) ── */
 
 .main-container {
   display: grid;
-  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin);
+  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
   height: 100vh;
   background-color: var(--WHITE);
 }
 
 .main-content {
-  grid-column: 2;
+  grid-column: 2 / 5; /* spans micro1 + gutter + micro2 = full module */
   position: relative;
 }
 
@@ -44,17 +44,16 @@
   margin: 0;
 }
 
-/* ── 2-COL (≥ 1028px) ──────────────────────────────────────────────── */
-/* Content sits in col 4 (right module) so the left module provides    */
-/* room for the image's negative left offset.                          */
+/* ── 4-MODULE (≥ 1028px) ───────────────────────────────────────────── */
+/* Content in micro5+6 (right pair); left pair gives image room.       */
 
 @media (min-width: 1028px) {
   .main-container {
-    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
   }
 
   .main-content {
-    grid-column: 4;
+    grid-column: 6 / 9; /* micro3 + gutter + micro4 */
   }
 
   .main-image {
@@ -62,15 +61,15 @@
   }
 }
 
-/* ── 3-COL (≥ 1524px) ──────────────────────────────────────────────── */
-/* col 4 is the center module; navbar (centered on page) aligns with it */
+/* ── 6-MODULE (≥ 1524px) ───────────────────────────────────────────── */
+/* grid-column 6/9 is now the center pair; navbar aligns naturally.    */
 
 @media (min-width: 1524px) {
   .main-container {
-    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
   }
 
-  /* .main-content stays at grid-column: 4 (center module) */
+  /* .main-content stays at grid-column: 6 / 9 (center pair) */
 }
 
 /* ── MOBILE (≤ 768px) ──────────────────────────────────────────────── */

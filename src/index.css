@@ -4,13 +4,18 @@
   --GREY: #777777;
 
   /* ── Grid system ────────────────────────────────────────────────
-     To adjust the minimum module width, change --module-min-width.
-     Then update the two @media breakpoints below using:
-       2-col = 2 × --module-min-width + 3 × --grid-margin
-       3-col = 3 × --module-min-width + 4 × --grid-margin          */
+     Layouts: base = 2 modules · 4-mod at 1028px · 6-mod at 1524px
+     --module-min-width = min visual column width (= 2 micro-modules
+     + 1 gutter). To retune, change this value and update the two
+     @media breakpoints using:
+       4-mod = 2 × --module-min-width + 3 × --grid-margin
+       6-mod = 3 × --module-min-width + 4 × --grid-margin
+     --module-width  = navbar width = 2 micro-modules + 1 gutter
+     --micro-width   = single micro-module width (for sub-positioning) */
   --grid-margin: 36px;
-  --module-min-width: 460px; /* 2-col at 1028px · 3-col at 1524px */
-  --module-width: calc(100vw - 2 * var(--grid-margin)); /* 1-col */
+  --module-min-width: 460px; /* 4-mod at 1028px · 6-mod at 1524px */
+  --module-width: calc(100vw - 2 * var(--grid-margin));
+  --micro-width: calc((100vw - 3 * var(--grid-margin)) / 2);
 
   font-family: 'Rethink Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,17 +31,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 2-col: 2 × 460 + 3 × 36 = 1028px */
+/* 4-mod: 2 × 460 + 3 × 36 = 1028px */
 @media (min-width: 1028px) {
   :root {
     --module-width: calc((100vw - 3 * var(--grid-margin)) / 2);
+    --micro-width: calc((100vw - 5 * var(--grid-margin)) / 4);
   }
 }
 
-/* 3-col: 3 × 460 + 4 × 36 = 1524px */
+/* 6-mod: 3 × 460 + 4 × 36 = 1524px */
 @media (min-width: 1524px) {
   :root {
     --module-width: calc((100vw - 4 * var(--grid-margin)) / 3);
+    --micro-width: calc((100vw - 7 * var(--grid-margin)) / 6);
   }
 }
 
