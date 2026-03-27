@@ -45,7 +45,8 @@
   .main-container {
     grid-template-columns: 1fr;
     overflow: hidden;
-    height: 100vh;
+    height: 100dvh;
+    touch-action: none;
   }
 
   .main-content {
@@ -54,17 +55,18 @@
 
   .main-image {
     left: 0;
-    width: 196px;
+    top: calc(2 / 20 * 100dvh);
+    width: 48vw;
     height: auto;
   }
 
   .main-text {
     left: 20px;
     width: calc(100% - 40px);
-    font-size: 22px;
-    line-height: 28px;
-    text-indent: 186px;
-    top: calc(16.8 / 70 * 100vh);
+    font-size: 5.5vw;
+    line-height: 7vw;
+    text-indent: 45vw;
+    top: calc(16.8 / 70 * 100dvh);
   }
 
   .placeholder-title {
