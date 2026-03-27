@@ -55,17 +55,17 @@
 
   .main-image {
     left: 0;
-    top: calc(2 / 20 * 100dvh);
-    width: 48vw;
+    top: calc(24dvh - 28vw);
+    width: 40vw;
     height: auto;
   }
 
   .main-text {
     left: 20px;
     width: calc(100% - 40px);
-    font-size: 5.5vw;
-    line-height: 7vw;
-    text-indent: 45vw;
+    font-size: 5vw;
+    line-height: 6.5vw;
+    text-indent: 38vw;
     top: calc(16.8 / 70 * 100dvh);
   }
 

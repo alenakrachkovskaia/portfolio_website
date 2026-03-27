@@ -94,16 +94,16 @@
   }
 
   .nav-text-link {
-    font-size: 18px;
+    font-size: 4.4vw;
   }
 
   .nav-logo-link {
-    height: 20px;
+    height: 5vw;
   }
 
   .nav-logo {
-    width: 20px;
-    height: 20px;
+    width: 5vw;
+    height: 5vw;
   }
 
   .nav-item-container:first-child {
