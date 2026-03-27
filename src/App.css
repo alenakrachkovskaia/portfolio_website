@@ -1,6 +1,8 @@
+/* ── 1-COL BASE (all widths; overridden below for larger viewports) ── */
+
 .main-container {
   display: grid;
-  grid-template-columns: 1fr var(--content-width) 1fr;
+  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin);
   height: 100vh;
   background-color: var(--WHITE);
 }
@@ -10,9 +12,10 @@
   position: relative;
 }
 
+/* Desktop image/text defaults (also used for 768–1027px – TODO: dedicated design) */
 .main-image {
   position: absolute;
-  left: -150px;
+  left: 0;
   top: calc(2 / 20 * 100vh);
 }
 
@@ -41,16 +44,42 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
+/* ── 2-COL (≥ 1028px) ──────────────────────────────────────────────── */
+/* Content sits in col 4 (right module) so the left module provides    */
+/* room for the image's negative left offset.                          */
+
+@media (min-width: 1028px) {
   .main-container {
-    grid-template-columns: 1fr;
-    overflow: hidden;
-    height: 100dvh;
-    touch-action: none;
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
   }
 
   .main-content {
-    grid-column: 1;
+    grid-column: 4;
+  }
+
+  .main-image {
+    left: -150px;
+  }
+}
+
+/* ── 3-COL (≥ 1524px) ──────────────────────────────────────────────── */
+/* col 4 is the center module; navbar (centered on page) aligns with it */
+
+@media (min-width: 1524px) {
+  .main-container {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  /* .main-content stays at grid-column: 4 (center module) */
+}
+
+/* ── MOBILE (≤ 768px) ──────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .main-container {
+    overflow: hidden;
+    height: 100dvh;
+    touch-action: none;
   }
 
   .main-image {
@@ -61,11 +90,11 @@
   }
 
   .main-text {
-    left: 20px;
-    width: calc(100% - 40px);
+    left: 0;
+    width: 100%;
     font-size: 4.75vw;
     line-height: 6.175vw;
-    text-indent: 38vw;
+    text-indent: 43vw;
     top: calc(16.8 / 70 * 100dvh);
   }
 

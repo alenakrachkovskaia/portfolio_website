@@ -12,7 +12,7 @@
 }
 
 .navbar-inner {
-  width: var(--content-width);
+  width: var(--module-width);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -89,7 +89,6 @@
   }
 
   .navbar-inner {
-    width: calc(100% - 40px);
     padding-bottom: 26px;
   }
 

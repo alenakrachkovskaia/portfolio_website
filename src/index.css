@@ -2,7 +2,16 @@
   --WHITE: #F8F8F8;
   --BLACK: #212121;
   --GREY: #777777;
-  --content-width: 31.9vw;
+
+  /* ── Grid system ────────────────────────────────────────────────
+     To adjust the minimum module width, change --module-min-width.
+     Then update the two @media breakpoints below using:
+       2-col = 2 × --module-min-width + 3 × --grid-margin
+       3-col = 3 × --module-min-width + 4 × --grid-margin          */
+  --grid-margin: 36px;
+  --module-min-width: 460px; /* 2-col at 1028px · 3-col at 1524px */
+  --module-width: calc(100vw - 2 * var(--grid-margin)); /* 1-col */
+
   font-family: 'Rethink Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -15,6 +24,20 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2-col: 2 × 460 + 3 × 36 = 1028px */
+@media (min-width: 1028px) {
+  :root {
+    --module-width: calc((100vw - 3 * var(--grid-margin)) / 2);
+  }
+}
+
+/* 3-col: 3 × 460 + 4 × 36 = 1524px */
+@media (min-width: 1524px) {
+  :root {
+    --module-width: calc((100vw - 4 * var(--grid-margin)) / 3);
+  }
 }
 
 body {
