@@ -4,7 +4,7 @@
   --GREY: #777777;
 
   /* ── Grid system ────────────────────────────────────────────────
-     Layouts: base = 2 modules · 4-mod at 1028px · 6-mod at 1524px
+     Layouts: base = 2 modules · 4-mod at 992px · 6-mod at 1476px
      --module-min-width = min visual column width (= 2 micro-modules
      + 1 gutter). To retune, change this value and update the two
      @media breakpoints using:
@@ -12,8 +12,8 @@
        6-mod = 3 × --module-min-width + 4 × --grid-margin
      --module-width  = navbar width = 2 micro-modules + 1 gutter
      --micro-width   = single micro-module width (for sub-positioning) */
-  --grid-margin: 36px;
-  --module-min-width: 460px; /* 4-mod at 1028px · 6-mod at 1524px */
+  --grid-margin: 24px;
+  --module-min-width: 460px; /* 4-mod at 992px · 6-mod at 1476px */
   --module-width: calc(100vw - 2 * var(--grid-margin));
   --micro-width: calc((100vw - 3 * var(--grid-margin)) / 2);
 
@@ -31,16 +31,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 4-mod: 2 × 460 + 3 × 36 = 1028px */
-@media (min-width: 1028px) {
+/* 4-mod: 2 × 460 + 3 × 24 = 992px */
+@media (min-width: 992px) {
   :root {
     --module-width: calc((100vw - 3 * var(--grid-margin)) / 2);
     --micro-width: calc((100vw - 5 * var(--grid-margin)) / 4);
   }
 }
 
-/* 6-mod: 3 × 460 + 4 × 36 = 1524px */
-@media (min-width: 1524px) {
+/* 6-mod: 3 × 460 + 4 × 24 = 1476px */
+@media (min-width: 1476px) {
   :root {
     --module-width: calc((100vw - 4 * var(--grid-margin)) / 3);
     --micro-width: calc((100vw - 7 * var(--grid-margin)) / 6);

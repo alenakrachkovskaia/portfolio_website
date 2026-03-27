@@ -44,10 +44,10 @@
   margin: 0;
 }
 
-/* ── 4-MODULE (≥ 1028px) ───────────────────────────────────────────── */
+/* ── 4-MODULE (≥ 992px) ────────────────────────────────────────────── */
 /* Content in micro5+6 (right pair); left pair gives image room.       */
 
-@media (min-width: 1028px) {
+@media (min-width: 992px) {
   .main-container {
     grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
   }
@@ -61,15 +61,17 @@
   }
 }
 
-/* ── 6-MODULE (≥ 1524px) ───────────────────────────────────────────── */
+/* ── 6-MODULE (≥ 1476px) ───────────────────────────────────────────── */
 /* grid-column 6/9 is now the center pair; navbar aligns naturally.    */
 
-@media (min-width: 1524px) {
+@media (min-width: 1476px) {
   .main-container {
     grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
   }
 
-  /* .main-content stays at grid-column: 6 / 9 (center pair) */
+  .main-content {
+    grid-column: 6 / 9; /* micro3 + gutter + micro4 = center pair, matches navbar */
+  }
 }
 
 /* ── MOBILE (≤ 768px) ──────────────────────────────────────────────── */
