@@ -63,8 +63,8 @@
   .main-text {
     left: 20px;
     width: calc(100% - 40px);
-    font-size: 5vw;
-    line-height: 6.5vw;
+    font-size: 4.75vw;
+    line-height: 6.175vw;
     text-indent: 38vw;
     top: calc(16.8 / 70 * 100dvh);
   }
