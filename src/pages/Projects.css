@@ -1,0 +1,91 @@
+/* ── BASE 2-MODULE ──────────────────────────────────────────────────── */
+
+.projects-container {
+  display: grid;
+  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  min-height: 100vh;
+  background-color: var(--WHITE);
+}
+
+.projects-content {
+  grid-column: 2 / 5;
+  padding-top: var(--grid-margin);
+  padding-bottom: 124px; /* 100px navbar + 24px clearance */
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-margin);
+}
+
+/* ── 4-MODULE (≥ 992px) ─────────────────────────────────────────────── */
+
+@media (min-width: 992px) {
+  .projects-container {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .projects-content {
+    grid-column: 2 / 9; /* all 4 micro-modules */
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── 6-MODULE (≥ 1476px) ────────────────────────────────────────────── */
+
+@media (min-width: 1476px) {
+  .projects-container {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .projects-content {
+    grid-column: 2 / 13; /* all 6 micro-modules */
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* ── CARD ───────────────────────────────────────────────────────────── */
+
+.project-card-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-info {
+  padding-top: 10px;
+}
+
+.project-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.project-card-header .h2 {
+  margin: 0;
+}
+
+.project-card-header .tag,
+.project-card-sub {
+  color: var(--GREY);
+}
+
+.project-card-sub {
+  margin-top: 2px;
+}
