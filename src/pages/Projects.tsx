@@ -28,7 +28,7 @@ const base = import.meta.env.BASE_URL
 const projects: ProjectData[] = [
   { id: 1, name: ‘Škola’,     year: ‘[1] [2] [3] [4]’, category: ‘Culture & Education’, image: `${base}projects/project-1.jpg`, route: ‘/skola’ },
   { id: 2, name: ‘Ceylon Home’,     year: ‘[1] [2] [5]’, category: ‘Home Fragrance’,  image: `${base}projects/project-2.jpg`, route: ‘/ceylon’ },
-  { id: 3, name: ‘Ust’ar’,    year: ‘[1] [2] [3]’, category: ‘Culture & Education’,   image: `${base}projects/project-3.jpg`, route: ‘/ustar’ },
+  { id: 3, name: "Ust\u2019ar",    year: ‘[1] [2] [3]’, category: ‘Culture & Education’,   image: `${base}projects/project-3.jpg`, route: ‘/ustar’ },
   { id: 4, name: ‘Mimicries’, year: ‘[2] [6] [7] [8]’, category: ‘Fashion Photoshoot’,      image: `${base}projects/project-4.jpg`, route: ‘/mimicries’ },
   { id: 5, name: ‘The Art of Printmaking’,      year: ‘[4]’, category: ‘PhD Thesis Book’,       image: `${base}projects/project-5.jpg`, route: ‘/book’ },
 ]
