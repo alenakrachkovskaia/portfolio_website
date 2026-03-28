@@ -7,6 +7,7 @@ interface ProjectData {
   year: string
   category: string
   image: string
+  imageWebp: string
   route: string
 }
 
@@ -26,11 +27,11 @@ const indexLines = [
 const base = import.meta.env.BASE_URL
 
 const projects: ProjectData[] = [
-  { id: 1, name: 'Škola',     year: '[1] [2] [3] [4]', category: 'Culture & Education', image: `${base}projects/project-1.jpg`, route: '/skola' },
-  { id: 2, name: 'Ceylon Home',     year: '[1] [2] [5]', category: 'Home Fragrance',  image: `${base}projects/project-2.jpg`, route: '/ceylon' },
-  { id: 3, name: "Ust\u2019ar",    year: '[1] [2] [3]', category: 'Culture & Education',   image: `${base}projects/project-3.jpg`, route: '/ustar' },
-  { id: 4, name: 'Mimicries', year: '[2] [6] [7] [8]', category: 'Fashion Photoshoot',      image: `${base}projects/project-4.jpg`, route: '/mimicries' },
-  { id: 5, name: 'The Art of Printmaking',      year: '[4]', category: 'PhD Thesis Book',       image: `${base}projects/project-5.jpg`, route: '/book' },
+  { id: 1, name: 'Škola',     year: '[1] [2] [3] [4]', category: 'Culture & Education', image: `${base}projects/project-1.jpg`, imageWebp: `${base}projects/project-1.webp`, route: '/skola' },
+  { id: 2, name: 'Ceylon Home',     year: '[1] [2] [5]', category: 'Home Fragrance',  image: `${base}projects/project-2.jpg`, imageWebp: `${base}projects/project-2.webp`, route: '/ceylon' },
+  { id: 3, name: "Ust\u2019ar",    year: '[1] [2] [3]', category: 'Culture & Education',   image: `${base}projects/project-3.jpg`, imageWebp: `${base}projects/project-3.webp`, route: '/ustar' },
+  { id: 4, name: 'Mimicries', year: '[2] [6] [7] [8]', category: 'Fashion Photoshoot',      image: `${base}projects/project-4.jpg`, imageWebp: `${base}projects/project-4.webp`, route: '/mimicries' },
+  { id: 5, name: 'The Art of Printmaking',      year: '[4]', category: 'PhD Thesis Book',       image: `${base}projects/project-5.jpg`, imageWebp: `${base}projects/project-5.webp`, route: '/book' },
 ]
 
 function Projects() {
@@ -49,7 +50,10 @@ function Projects() {
             <div key={project.id} className="project-card">
               <div className="project-card-image">
                 <Link to={project.route} className="project-image-link">
-                  <img src={project.image} alt={project.name} />
+                  <picture>
+                    <source srcSet={project.imageWebp} type="image/webp" />
+                    <img src={project.image} alt={project.name} loading="lazy" />
+                  </picture>
                 </Link>
               </div>
               <div className="project-card-info">
