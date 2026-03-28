@@ -24,10 +24,6 @@
   left: 0;
   top: calc(21 / 70 * 100vh);
   width: 100%;
-  font-family: 'Montagu Slab', serif;
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 45px;
   text-indent: 140px;
   color: var(--BLACK);
   margin: 0;
@@ -93,8 +89,6 @@
   .main-text {
     left: 0;
     width: 100%;
-    font-size: 4.75vw;
-    line-height: 6.175vw;
     text-indent: 43vw;
     top: calc(16.8 / 70 * 100dvh);
   }

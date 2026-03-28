@@ -78,7 +78,7 @@ export default function Main() {
           alt="Animated Design"
           className="main-image"
         />
-        <p className="main-text">
+        <p className="main-text h1">
           lena Krachkovskaia is a multidisciplinary designer and art director with a wide range of skills: from typography and branding to media production. Her favorite things in design process are drawing letters and calculating grids.
         </p>
       </div>

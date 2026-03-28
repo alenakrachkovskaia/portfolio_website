@@ -1,0 +1,66 @@
+/* ── H1 ──────────────────────────────────────────────────────────────── */
+
+.h1 {
+  font-family: 'Montagu Slab', serif;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+/* ── H2 ──────────────────────────────────────────────────────────────── */
+
+.h2 {
+  font-family: 'ZT Nature', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--BLACK);
+}
+
+/* ── TAG ─────────────────────────────────────────────────────────────── */
+/* Composite font: digits (0–9) → Montagu Slab Medium
+                  everything else → ZT Nature Medium               */
+
+@font-face {
+  font-family: 'Tag Font';
+  src: url('https://fonts.gstatic.com/s/montaguslab/v17/6qLSKZIQtB_zv0xUaXRDWkY_HXsns46RZV40voXj5xGLdw.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039; /* 0 1 2 3 4 5 6 7 8 9 */
+}
+
+@font-face {
+  font-family: 'Tag Font';
+  src: url('../assets/fonts/ZTNature-Medium.woff2') format('woff2'),
+       url('../assets/fonts/ZTNature-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.tag {
+  font-family: 'Tag Font', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* ── Mobile (≤ 768px) ────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 4.75vw;
+    line-height: 6.175vw;
+  }
+
+  .h2 {
+    font-size: 2.9vw;
+    line-height: 3.65vw;
+  }
+
+  .tag {
+    font-size: 1.85vw;
+    line-height: 2.35vw;
+  }
+}
