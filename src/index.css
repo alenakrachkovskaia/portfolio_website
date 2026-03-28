@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'ZT Nature';
+  src: url('./assets/fonts/ZTNature-Bold.woff2') format('woff2'),
+       url('./assets/fonts/ZTNature-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --WHITE: #F8F8F8;
   --BLACK: #212121;
