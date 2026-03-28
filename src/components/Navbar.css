@@ -35,12 +35,12 @@
 
 .nav-logo-link {
   display: block;
-  height: 27px;
+  height: 22px;
 }
 
 .nav-logo {
-  width: 27px;
-  height: 27px;
+  width: 22px;
+  height: 22px;
   filter: brightness(0) saturate(100%) invert(8%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(97%) contrast(92%);
   transition: filter 0.2s ease;
 }
@@ -52,7 +52,7 @@
 .nav-text-link {
   font-family: 'ZT Nature', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   color: var(--BLACK);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -93,16 +93,16 @@
   }
 
   .nav-text-link {
-    font-size: 3.75vw;
+    font-size: 3.125vw;
   }
 
   .nav-logo-link {
-    height: 4.25vw;
+    height: 3.54vw;
   }
 
   .nav-logo {
-    width: 4.25vw;
-    height: 4.25vw;
+    width: 3.54vw;
+    height: 3.54vw;
   }
 
   .nav-item-container:first-child {
