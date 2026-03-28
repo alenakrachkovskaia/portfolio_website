@@ -89,7 +89,7 @@
   .main-text {
     left: 0;
     width: 100%;
-    text-indent: 32vw;
+    text-indent: 34vw;
     top: calc(16.8 / 70 * 100dvh);
   }
 
