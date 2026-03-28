@@ -48,7 +48,9 @@ function Projects() {
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-card-image">
-                <img src={project.image} alt={project.name} />
+                <Link to={project.route} className="project-image-link">
+                  <img src={project.image} alt={project.name} />
+                </Link>
               </div>
               <div className="project-card-info">
                 <div className="project-card-header">
