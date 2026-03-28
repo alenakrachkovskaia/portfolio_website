@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Projects.css'
 
 interface ProjectData {
@@ -6,6 +7,7 @@ interface ProjectData {
   year: string
   category: string
   image: string
+  route: string
 }
 
 const indexLines = [
@@ -24,11 +26,11 @@ const indexLines = [
 const base = import.meta.env.BASE_URL
 
 const projects: ProjectData[] = [
-  { id: 1, name: 'Škola',     year: '[1] [2] [3] [4]', category: 'Culture & Education', image: `${base}projects/project-1.jpg` },
-  { id: 2, name: 'Ceylon Home',     year: '[1] [2] [5]', category: 'Home Fragrance',  image: `${base}projects/project-2.jpg` },
-  { id: 3, name: 'Ust’ar',    year: '[1] [2] [3]', category: 'Culture & Education',   image: `${base}projects/project-3.jpg` },
-  { id: 4, name: 'Mimicries', year: '[2] [6] [7] [8]', category: 'Fashion Photoshoot',      image: `${base}projects/project-4.jpg` },
-  { id: 5, name: 'The Art of Printmaking',      year: '[4]', category: 'PhD Thesis Book',       image: `${base}projects/project-5.jpg` },
+  { id: 1, name: ‘Škola’,     year: ‘[1] [2] [3] [4]’, category: ‘Culture & Education’, image: `${base}projects/project-1.jpg`, route: ‘/skola’ },
+  { id: 2, name: ‘Ceylon Home’,     year: ‘[1] [2] [5]’, category: ‘Home Fragrance’,  image: `${base}projects/project-2.jpg`, route: ‘/ceylon’ },
+  { id: 3, name: ‘Ust’ar’,    year: ‘[1] [2] [3]’, category: ‘Culture & Education’,   image: `${base}projects/project-3.jpg`, route: ‘/ustar’ },
+  { id: 4, name: ‘Mimicries’, year: ‘[2] [6] [7] [8]’, category: ‘Fashion Photoshoot’,      image: `${base}projects/project-4.jpg`, route: ‘/mimicries’ },
+  { id: 5, name: ‘The Art of Printmaking’,      year: ‘[4]’, category: ‘PhD Thesis Book’,       image: `${base}projects/project-5.jpg`, route: ‘/book’ },
 ]
 
 function Projects() {
@@ -50,7 +52,7 @@ function Projects() {
               </div>
               <div className="project-card-info">
                 <div className="project-card-header">
-                  <h2 className="h2">{project.name}</h2>
+                  <Link to={project.route} className="project-name-link"><h2 className="h2">{project.name}</h2></Link>
                   <span className="tag">{project.year}</span>
                 </div>
                 <div className="project-card-sub tag">{project.category}</div>

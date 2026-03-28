@@ -96,3 +96,14 @@
 .project-card-sub {
   margin-top: 2px;
 }
+
+/* ── PROJECT NAME LINK ──────────────────────────────────────────────── */
+
+.project-name-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-name-link:hover .h2 {
+  color: var(--GREY);
+}
