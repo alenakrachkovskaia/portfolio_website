@@ -81,11 +81,6 @@
   margin: 0;
 }
 
-.project-card-header .tag,
-.project-card-sub {
-  color: var(--GREY);
-}
-
 .project-card-sub {
   margin-top: 2px;
 }

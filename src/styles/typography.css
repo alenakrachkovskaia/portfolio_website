@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: 'Tag Font';
-  src: url('https://fonts.gstatic.com/s/montaguslab/v17/6qLSKZIQtB_zv0xUaXRDWkY_HXsns46RZV40voXj5xGLdw.woff2') format('woff2');
+  src: url('../assets/fonts/MontaguSlab-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -44,6 +44,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
 }
 
 /* ── Mobile (≤ 768px) ────────────────────────────────────────────────── */
