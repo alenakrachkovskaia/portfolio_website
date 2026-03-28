@@ -83,6 +83,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --grid-margin: 20px;
+  }
+
   html.main-fixed, html.main-fixed body {
     overflow: hidden;
     height: 100%;
