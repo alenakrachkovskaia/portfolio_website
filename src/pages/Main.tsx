@@ -16,6 +16,11 @@ export default function Main() {
   const [totalDistance, setTotalDistance] = useState(0)
 
   useEffect(() => {
+    document.documentElement.classList.add('main-fixed')
+    return () => document.documentElement.classList.remove('main-fixed')
+  }, [])
+
+  useEffect(() => {
     let lastTouchPos = { x: 0, y: 0 }
     let touchDistance = 0
 
