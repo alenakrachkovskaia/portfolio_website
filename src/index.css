@@ -11,6 +11,15 @@
 
 @font-face {
   font-family: 'ZT Nature';
+  src: url('./assets/fonts/ZTNature-SemiBold.woff2') format('woff2'),
+       url('./assets/fonts/ZTNature-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ZT Nature';
   src: url('./assets/fonts/ZTNature-Medium.woff2') format('woff2'),
        url('./assets/fonts/ZTNature-Medium.woff') format('woff');
   font-weight: 500;
