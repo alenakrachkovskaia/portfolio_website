@@ -51,6 +51,20 @@
   }
 }
 
+/* ── INDEX CARD ─────────────────────────────────────────────────────── */
+
+.project-card--index {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-index-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* ── CARD ───────────────────────────────────────────────────────────── */
 
 .project-card-image {

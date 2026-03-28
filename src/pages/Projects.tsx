@@ -8,6 +8,17 @@ interface ProjectData {
   image: string
 }
 
+const indexLines = [
+  '[1] — brand identity',
+  '[2] — art direction',
+  '[3] — Type Design',
+  '[4] — editorial design',
+  '[5] — packaging design',
+  '[6] — production',
+  '[7] — styling',
+  '[8] — retouching',
+]
+
 const projects: ProjectData[] = [
   { id: 1, name: 'SKOLA',     year: '2024', category: 'Brand Identity', image: '/projects/project-1.jpg' },
   { id: 2, name: 'USTAR',     year: '2023', category: 'Visual Design',  image: '/projects/project-2.jpg' },
@@ -21,6 +32,13 @@ function Projects() {
     <div className="projects-container">
       <div className="projects-content">
         <div className="projects-grid">
+          <div className="project-card project-card--index">
+            <div className="project-card-index-text">
+              {indexLines.map((line, i) => (
+                <div key={i} className="tag">{line}</div>
+              ))}
+            </div>
+          </div>
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-card-image">
