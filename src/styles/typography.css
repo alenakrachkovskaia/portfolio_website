@@ -27,7 +27,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0030-0039; /* 0 1 2 3 4 5 6 7 8 9 */
+  unicode-range: U+0030-0039; /* 0–9 */
 }
 
 @font-face {
@@ -37,6 +37,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-002F, U+003A-10FFFF; /* everything except 0–9 */
 }
 
 .tag {
