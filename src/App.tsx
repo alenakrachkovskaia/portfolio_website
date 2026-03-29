@@ -3,6 +3,7 @@ import Main from './pages/Main'
 import Projects from './pages/Projects'
 import Placeholder from './pages/Placeholder'
 import Skola from './pages/Skola'
+import Ceylon from './pages/Ceylon'
 import Navbar from './components/Navbar'
 import './App.css'
 
@@ -17,7 +18,7 @@ function App() {
         <Route path="/info" element={<Placeholder title="INFO" />} />
         <Route path="/skola" element={<Skola />} />
         <Route path="/ustar" element={<Placeholder title="USTAR" />} />
-        <Route path="/ceylon" element={<Placeholder title="CEYLON" />} />
+        <Route path="/ceylon" element={<Ceylon />} />
         <Route path="/mimicries" element={<Placeholder title="MIMICRIES" />} />
         <Route path="/book" element={<Placeholder title="BOOK" />} />
         <Route path="*" element={<Main />} />
