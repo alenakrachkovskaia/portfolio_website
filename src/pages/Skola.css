@@ -1,0 +1,36 @@
+/* ── SKOLA PAGE ──────────────────────────────────────────────────────── */
+
+.skola-page {
+  width: 100%;
+  background-color: var(--WHITE);
+  padding-bottom: 124px; /* 100px navbar + 24px clearance */
+}
+
+/* ── MEDIA (images & videos) ─────────────────────────────────────────── */
+/* Full-bleed, no gap between consecutive media blocks                   */
+
+.skola-media {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.skola-media iframe {
+  display: block;
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── TEXT BLOCK ──────────────────────────────────────────────────────── */
+/* 36px gap after preceding media · 64px gap before following media      */
+
+.skola-text {
+  padding-left: var(--grid-margin);
+  padding-right: var(--grid-margin);
+  margin-top: 36px;
+  margin-bottom: 64px;
+}
