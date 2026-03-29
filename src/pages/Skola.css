@@ -2,6 +2,8 @@
 
 .skola-page {
   width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   background-color: var(--WHITE);
   padding-bottom: 124px; /* 100px navbar + 24px clearance */
 }
@@ -12,9 +14,15 @@
 .skola-media {
   display: block;
   width: 100%;
-  height: auto;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+.skola-media img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .skola-media iframe {
