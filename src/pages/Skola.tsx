@@ -18,14 +18,26 @@ export default function Skola() {
       </div>
 
       <div className="skola-text">
-        <div className="skola-text-tag tag">Tag</div>
-        <p className="skola-text-body text">Text</p>
-        <div className="skola-text-secondary secondary-tag">Secondary tag</div>
+        <div className="skola-text-tag tag">Culture & Education</div>
+        <p className="skola-text-body text">Škola (meaning "school") is an initiative by an art residency that brings together artists and educational institutions through shared programs. A brand was built around the idea of synthesis: the meeting point between the informal and the structured, the intuitive and the precise. At the core of the identity is a custom typeface. It was designed by merging the organic, almost childlike quality of handwritten letterforms with the strict grid of a monospaced typeface. The result is a visual language that feels both familiar and considered, mirroring the project's effort to connect artistic tradition with modern technology.</p>
+        <div className="skola-text-secondary secondary-tag">[Brand Identity]  [Art Direction]  [Type Design]  [Editorial Design]</div>
       </div>
 
       {images.slice(1).map(name => (
         <div key={name} className="skola-media">
-          <img src={`${base}skola/${name}.webp`} alt="" />
+          {name === 'skola-07' ? (
+            <div style={{ position: 'relative', paddingTop: '56.25%', width: '100%' }}>
+              <iframe
+                src="https://kinescope.io/embed/7MSs9CDpyobatAQmKahnLD"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                frameBorder="0"
+                allowFullScreen
+                style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }}
+              />
+            </div>
+          ) : (
+            <img src={`${base}skola/${name}.webp`} alt="" />
+          )}
         </div>
       ))}
 
