@@ -25,7 +25,7 @@ export default function Ceylon() {
 
       {images.slice(1).map(name => (
         <div key={name} className="ceylon-media">
-          <img src={`${base}ceylon/${name}.webp`} alt="" />
+          <img src={`${base}ceylon/${name === 'ceylon-02' ? `${name}.gif` : `${name}.webp`}`} alt="" />
         </div>
       ))}
 
