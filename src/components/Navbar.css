@@ -29,9 +29,9 @@
   position: relative;
 }
 
-/* Logo sits 2px lower than text items */
+/* Logo sits 1px lower than text items */
 .nav-item-container:first-child {
-  margin-bottom: -2px;
+  margin-bottom: -1px;
 }
 
 .nav-logo-link {
@@ -77,9 +77,9 @@
   transform: translateX(-50%);
 }
 
-/* Logo is 2px lower, so dot needs 2px less offset to reach same screen position */
+/* Logo is 1px lower, so dot needs 1px less offset to reach same screen position */
 .nav-item-container:first-child .nav-dot {
-  bottom: -7px;
+  bottom: -8px;
 }
 
 @media (max-width: 768px) {
