@@ -102,3 +102,45 @@
     grid-row: 2;
   }
 }
+
+/* ── CASE NAVIGATION ─────────────────────────────────────────────────── */
+/* Previous (micro1, left) and Next (rightmost micro) on the same row    */
+
+.skola-nav {
+  display: grid;
+  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  align-items: start;
+  margin-top: 36px;
+}
+
+.skola-nav-prev {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  text-align: left;
+}
+
+.skola-nav-next {
+  grid-column: 4 / 5;
+  grid-row: 1;
+  text-align: right;
+}
+
+@media (min-width: 992px) {
+  .skola-nav {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .skola-nav-next {
+    grid-column: 8 / 9;
+  }
+}
+
+@media (min-width: 1476px) {
+  .skola-nav {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .skola-nav-next {
+    grid-column: 12 / 13;
+  }
+}

@@ -29,6 +29,11 @@ export default function Skola() {
         </div>
       ))}
 
+      <div className="skola-nav">
+        <div className="skola-nav-prev h2">Previous Case<br />🡰</div>
+        <div className="skola-nav-next h2">Next Case<br />🡲</div>
+      </div>
+
     </div>
   )
 }
