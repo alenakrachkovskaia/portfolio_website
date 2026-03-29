@@ -46,6 +46,39 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ── SECONDARY TAG ───────────────────────────────────────────────────── */
+
+.secondary-tag {
+  font-family: 'Tag Font', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--GREY);
+}
+
+/* ── TEXT ────────────────────────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'ZT Nature Medium';
+  src: url('../assets/fonts/ZTNature-Medium.woff2') format('woff2'),
+       url('../assets/fonts/ZTNature-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.text {
+  font-family: 'ZT Nature Medium', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: var(--BLACK);
 }
 
 /* ── Mobile (≤ 768px) ────────────────────────────────────────────────── */
@@ -64,5 +97,15 @@
   .tag {
     font-size: 1.85vw;
     line-height: 2.35vw;
+  }
+
+  .secondary-tag {
+    font-size: 1.85vw;
+    line-height: 2.35vw;
+  }
+
+  .text {
+    font-size: 2.375vw;
+    line-height: 2.6vw;
   }
 }
