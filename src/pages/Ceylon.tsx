@@ -6,6 +6,7 @@ const images = [
   'ceylon-00', 'ceylon-01', 'ceylon-02', 'ceylon-03', 'ceylon-04',
   'ceylon-05', 'ceylon-06', 'ceylon-07', 'ceylon-08', 'ceylon-09',
   'ceylon-10', 'ceylon-11', 'ceylon-12', 'ceylon-13', 'ceylon-14',
+  'ceylon-15',
 ]
 
 export default function Ceylon() {
