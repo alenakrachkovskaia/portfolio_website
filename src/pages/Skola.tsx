@@ -12,11 +12,23 @@ const images = [
 export default function Skola() {
   return (
     <div className="skola-page">
-      {images.map(name => (
+
+      <div className="skola-media">
+        <img src={`${base}skola/skola-00.webp`} alt="" />
+      </div>
+
+      <div className="skola-text">
+        <div className="skola-text-tag tag">Tag</div>
+        <p className="skola-text-body text">Text</p>
+        <div className="skola-text-secondary secondary-tag">Secondary tag</div>
+      </div>
+
+      {images.slice(1).map(name => (
         <div key={name} className="skola-media">
           <img src={`${base}skola/${name}.webp`} alt="" />
         </div>
       ))}
+
     </div>
   )
 }

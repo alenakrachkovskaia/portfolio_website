@@ -35,10 +35,70 @@
 
 /* ── TEXT BLOCK ──────────────────────────────────────────────────────── */
 /* 36px gap after preceding media · 64px gap before following media      */
+/* Mobile (2-mod): TAG row1 · TEXT+SEC-TAG stacked below (rows 2–3)      */
+/* Desktop (4/6-mod): TAG and TEXT on same row · SEC-TAG on row below    */
 
 .skola-text {
-  padding-left: var(--grid-margin);
-  padding-right: var(--grid-margin);
+  display: grid;
+  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
   margin-top: 36px;
   margin-bottom: 64px;
+}
+
+/* TAG — micro1, always row 1 */
+.skola-text-tag {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+/* TEXT — full width (both micros), below TAG on mobile */
+.skola-text-body {
+  grid-column: 2 / 5;
+  grid-row: 2;
+  text-align: left;
+  margin: 0;
+}
+
+/* SECONDARY TAG — same column as TEXT, row below */
+.skola-text-secondary {
+  grid-column: 2 / 5;
+  grid-row: 3;
+}
+
+/* ── 4-MODULE (≥ 992px) ─────────────────────────────────────────────── */
+/* TEXT: 3 micros (m2–m4), right-aligned · same row as TAG              */
+
+@media (min-width: 992px) {
+  .skola-text {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .skola-text-body {
+    grid-column: 4 / 9;
+    grid-row: 1;
+  }
+
+  .skola-text-secondary {
+    grid-column: 4 / 9;
+    grid-row: 2;
+  }
+}
+
+/* ── 6-MODULE (≥ 1476px) ────────────────────────────────────────────── */
+/* TEXT: 4 micros (m3–m6), right-aligned · same row as TAG              */
+
+@media (min-width: 1476px) {
+  .skola-text {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .skola-text-body {
+    grid-column: 6 / 13;
+    grid-row: 1;
+  }
+
+  .skola-text-secondary {
+    grid-column: 6 / 13;
+    grid-row: 2;
+  }
 }
