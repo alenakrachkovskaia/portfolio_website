@@ -1,31 +1,5 @@
 @import './styles/typography.css';
 
-@font-face {
-  font-family: 'ZT Nature';
-  src: url('./assets/fonts/ZTNature-Bold.woff2') format('woff2'),
-       url('./assets/fonts/ZTNature-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ZT Nature';
-  src: url('./assets/fonts/ZTNature-SemiBold.woff2') format('woff2'),
-       url('./assets/fonts/ZTNature-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ZT Nature';
-  src: url('./assets/fonts/ZTNature-Medium.woff2') format('woff2'),
-       url('./assets/fonts/ZTNature-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   --WHITE: #F8F8F8;
