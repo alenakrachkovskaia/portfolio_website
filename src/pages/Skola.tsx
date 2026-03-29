@@ -25,10 +25,12 @@ export default function Skola() {
 
       {images.slice(1).map(name => (
         <div key={name} className="skola-media">
-          {name === 'skola-07' ? (
+          {name === 'skola-07' || name === 'skola-10' ? (
             <div style={{ position: 'relative', paddingTop: '56.25%', width: '100%' }}>
               <iframe
-                src="https://kinescope.io/embed/7MSs9CDpyobatAQmKahnLD"
+                src={name === 'skola-07'
+                  ? 'https://kinescope.io/embed/7MSs9CDpyobatAQmKahnLD'
+                  : 'https://kinescope.io/embed/j12mmne64foZxuhyDBSCaT'}
                 allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
                 frameBorder="0"
                 allowFullScreen
