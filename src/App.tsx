@@ -5,6 +5,7 @@ import Placeholder from './pages/Placeholder'
 import Skola from './pages/Skola'
 import Ceylon from './pages/Ceylon'
 import Ustar from './pages/Ustar'
+import Mimicries from './pages/Mimicries'
 import Navbar from './components/Navbar'
 import './App.css'
 
@@ -20,7 +21,7 @@ function App() {
         <Route path="/skola" element={<Skola />} />
         <Route path="/ustar" element={<Ustar />} />
         <Route path="/ceylon" element={<Ceylon />} />
-        <Route path="/mimicries" element={<Placeholder title="MIMICRIES" />} />
+        <Route path="/mimicries" element={<Mimicries />} />
         <Route path="/book" element={<Placeholder title="BOOK" />} />
         <Route path="*" element={<Main />} />
       </Routes>
