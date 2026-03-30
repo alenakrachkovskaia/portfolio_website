@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import './Book.css'
 
 const base = import.meta.env.BASE_URL
@@ -7,7 +8,21 @@ const images = [
   'book-06', 'book-07', 'book-08', 'book-09', 'book-10', 'book-11',
 ]
 
+const overlays = new Set(['book-02', 'book-06', 'book-08'])
+
 export default function Book() {
+  const [overlayOpacity, setOverlayOpacity] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)
+      const opacity = Math.min(1, Math.max(0, (scrolled - 0.3) / 0.3))
+      setOverlayOpacity(opacity)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div className="book-page">
 
@@ -23,7 +38,19 @@ export default function Book() {
 
       {images.slice(1).map(name => (
         <div key={name} className="book-media">
-          <img src={`${base}book/${name}.webp`} alt="" />
+          {overlays.has(name) ? (
+            <div className="book-media-overlay-wrapper">
+              <img src={`${base}book/${name}.webp`} alt="" />
+              <img
+                src={`${base}book/${name}-overlay.webp`}
+                alt=""
+                className="book-media-overlay"
+                style={{ opacity: overlayOpacity }}
+              />
+            </div>
+          ) : (
+            <img src={`${base}book/${name}.webp`} alt="" />
+          )}
         </div>
       ))}
 
