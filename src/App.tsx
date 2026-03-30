@@ -8,6 +8,7 @@ import Ustar from './pages/Ustar'
 import Mimicries from './pages/Mimicries'
 import Book from './pages/Book'
 import Info from './pages/Info'
+import Gallery from './pages/Gallery'
 import Navbar from './components/Navbar'
 import './App.css'
 
@@ -18,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/gallery" element={<Placeholder title="GALLERY" />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/info" element={<Info />} />
         <Route path="/skola" element={<Skola />} />
         <Route path="/ustar" element={<Ustar />} />

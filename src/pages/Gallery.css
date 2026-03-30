@@ -1,0 +1,17 @@
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-image {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.gallery-embed {
+  width: 100vw;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: none;
+}
