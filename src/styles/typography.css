@@ -14,7 +14,7 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 28px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: var(--BLACK);
 }
 
@@ -37,7 +37,7 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 /* ── SECONDARY TAG ───────────────────────────────────────────────────── */
@@ -48,7 +48,7 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.08em;
   color: var(--GREY);
 }
 
@@ -59,7 +59,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--BLACK);
 }
 
