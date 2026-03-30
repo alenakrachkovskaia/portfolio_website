@@ -7,6 +7,7 @@ import Ceylon from './pages/Ceylon'
 import Ustar from './pages/Ustar'
 import Mimicries from './pages/Mimicries'
 import Book from './pages/Book'
+import Info from './pages/Info'
 import Navbar from './components/Navbar'
 import './App.css'
 
@@ -18,7 +19,7 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/gallery" element={<Placeholder title="GALLERY" />} />
-        <Route path="/info" element={<Placeholder title="INFO" />} />
+        <Route path="/info" element={<Info />} />
         <Route path="/skola" element={<Skola />} />
         <Route path="/ustar" element={<Ustar />} />
         <Route path="/ceylon" element={<Ceylon />} />
