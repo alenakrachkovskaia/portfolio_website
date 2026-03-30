@@ -25,7 +25,7 @@ export default function Book() {
         if (!el) continue
         const rect = el.getBoundingClientRect()
         const progress = (vh - rect.top) / vh
-        next[name] = Math.min(1, Math.max(0, (progress - 0.5) / 0.3))
+        next[name] = Math.min(1, Math.max(0, (progress - 0.7) / 0.3))
       }
       setOpacities(prev => ({ ...prev, ...next }))
     }
