@@ -55,7 +55,7 @@ export default function Ustar() {
       ))}
 
       <div className="ustar-nav">
-        <Link to="/ceylon" className="ustar-nav-prev h2">🡰<br />Previous Case</Link>
+        <Link to="/ceylon" className="ustar-nav-prev h2">Previous Case<br />🡰</Link>
         <Link to="/mimicries" className="ustar-nav-next h2">Next Case<br />🡲</Link>
       </div>
 
