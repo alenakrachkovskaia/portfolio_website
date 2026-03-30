@@ -3,10 +3,14 @@ import './Ustar.css'
 const base = import.meta.env.BASE_URL
 
 const images = [
-  'ustar-01', 'ustar-02', 'ustar-03', 'ustar-04', 'ustar-05',
+  'ustar-01', 'ustar-02', 'ustar-04', 'ustar-05',
   'ustar-06', 'ustar-07', 'ustar-08', 'ustar-09', 'ustar-10',
   'ustar-11', 'ustar-12', 'ustar-13', 'ustar-14',
 ]
+
+const albImages = Array.from({ length: 42 }, (_, i) =>
+  `alb-${String(i + 1).padStart(2, '0')}`
+)
 
 export default function Ustar() {
   return (
@@ -22,7 +26,17 @@ export default function Ustar() {
         <div className="ustar-text-secondary secondary-tag">[brand identity]  [art direction]  [Type Design]</div>
       </div>
 
-      {images.slice(1).map(name => (
+      <div className="ustar-media">
+        <img src={`${base}ustar/ustar-02.webp`} alt="" />
+      </div>
+
+      <div className="ustar-alb-grid">
+        {albImages.map(name => (
+          <img key={name} src={`${base}ustar/alb/${name}.webp`} alt="" />
+        ))}
+      </div>
+
+      {images.slice(2).map(name => (
         <div key={name} className="ustar-media">
           <img src={`${base}ustar/${name}.webp`} alt="" />
         </div>

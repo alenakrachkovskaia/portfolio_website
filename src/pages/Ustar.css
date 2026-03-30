@@ -25,6 +25,21 @@
   height: auto;
 }
 
+/* ── ALB GRID (7 columns × 6 rows, no gap) ───────────────────────────── */
+
+.ustar-alb-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  width: 100%;
+}
+
+.ustar-alb-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ── TEXT BLOCK ──────────────────────────────────────────────────────── */
 /* 36px gap after preceding media · 64px gap before following media      */
 /* Mobile (2-mod): TAG row1 · TEXT+SEC-TAG stacked below (rows 2–3)      */
