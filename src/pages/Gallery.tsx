@@ -3,7 +3,7 @@ import './Gallery.css'
 const base = import.meta.env.BASE_URL
 
 const items: { type: 'image'; src: string }[] = [
-  { type: 'image', src: `${base}gallery/gallery-01.jpg` },
+  { type: 'image', src: `${base}gallery/gallery-01.webp` },
 ]
 
 export default function Gallery() {
