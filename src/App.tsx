@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Main from './pages/Main'
 import Projects from './pages/Projects'
-import Placeholder from './pages/Placeholder'
 import Skola from './pages/Skola'
 import Ceylon from './pages/Ceylon'
 import Ustar from './pages/Ustar'
