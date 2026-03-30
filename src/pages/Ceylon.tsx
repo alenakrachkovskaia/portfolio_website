@@ -19,7 +19,7 @@ export default function Ceylon() {
 
       <div className="ceylon-text">
         <div className="ceylon-text-tag tag">Home Fragrance</div>
-        <p className="ceylon-text-body text">Ceylon Home is a home fragrance company whose products are rooted in the traditions of Sri Lanka. Brand identity aims to build a sense of origin and journey , the feeling that each product has traveled a great distance to arrive in your home. Every detail of the project was chosen to carry that weight. Each box, each object becomes a small artifact, something that brings the atmosphere of a faraway place into everyday living.</p>
+        <p className="ceylon-text-body text">Ceylon Home is a home fragrance company whose products are rooted in the traditions of Sri Lanka. Brand identity aims to build a sense of origin and journey, the feeling that each product has traveled a great distance to arrive in your home. Every detail of the project was chosen to carry that weight. Each box, each object becomes a small artifact, something that brings the atmosphere of a faraway place into everyday living.</p>
         <div className="ceylon-text-secondary secondary-tag">[Brand Identity]  [Art Direction]  [Packaging Design]</div>
       </div>
 

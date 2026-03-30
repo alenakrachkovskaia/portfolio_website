@@ -20,8 +20,6 @@ const indexLines = [
   '[6] — production',
   '[7] — styling',
   '[8] — retouching',
-  '[9] — Lettering',
-  '[10] — illustration',
 ]
 
 const base = import.meta.env.BASE_URL
