@@ -182,3 +182,15 @@
     grid-column: 12 / 13;
   }
 }
+
+.ustar-nav-prev,
+.ustar-nav-next {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ustar-nav-prev:hover,
+.ustar-nav-next:hover {
+  color: var(--GREY);
+}

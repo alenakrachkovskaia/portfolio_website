@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Skola.css'
 
 const base = import.meta.env.BASE_URL
@@ -44,8 +45,7 @@ export default function Skola() {
       ))}
 
       <div className="skola-nav">
-        <div className="skola-nav-prev h2">Previous Case<br />🡰</div>
-        <div className="skola-nav-next h2">Next Case<br />🡲</div>
+        <Link to="/ceylon" className="skola-nav-next h2">Next Case<br />🡲</Link>
       </div>
 
     </div>

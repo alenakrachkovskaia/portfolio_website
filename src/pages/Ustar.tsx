@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Ustar.css'
 
 const base = import.meta.env.BASE_URL
@@ -54,8 +55,8 @@ export default function Ustar() {
       ))}
 
       <div className="ustar-nav">
-        <div className="ustar-nav-prev h2">Previous Case<br />🡰</div>
-        <div className="ustar-nav-next h2">Next Case<br />🡲</div>
+        <Link to="/ceylon" className="ustar-nav-prev h2">🡰<br />Previous Case</Link>
+        <Link to="/mimicries" className="ustar-nav-next h2">Next Case<br />🡲</Link>
       </div>
 
     </div>

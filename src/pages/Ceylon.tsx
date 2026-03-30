@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Ceylon.css'
 
 const base = import.meta.env.BASE_URL
@@ -30,8 +31,8 @@ export default function Ceylon() {
       ))}
 
       <div className="ceylon-nav">
-        <div className="ceylon-nav-prev h2">Previous Case<br />🡰</div>
-        <div className="ceylon-nav-next h2">Next Case<br />🡲</div>
+        <Link to="/skola" className="ceylon-nav-prev h2">🡰<br />Previous Case</Link>
+        <Link to="/ustar" className="ceylon-nav-next h2">Next Case<br />🡲</Link>
       </div>
 
     </div>

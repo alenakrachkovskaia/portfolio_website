@@ -153,3 +153,15 @@
     grid-column: 12 / 13;
   }
 }
+
+.skola-nav-prev,
+.skola-nav-next {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.skola-nav-prev:hover,
+.skola-nav-next:hover {
+  color: var(--GREY);
+}

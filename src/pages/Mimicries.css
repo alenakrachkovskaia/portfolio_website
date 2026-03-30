@@ -186,3 +186,15 @@
     grid-column: 12 / 13;
   }
 }
+
+.mimicries-nav-prev,
+.mimicries-nav-next {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mimicries-nav-prev:hover,
+.mimicries-nav-next:hover {
+  color: var(--GREY);
+}

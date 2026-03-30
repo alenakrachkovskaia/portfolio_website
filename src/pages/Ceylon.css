@@ -143,3 +143,15 @@
     grid-column: 12 / 13;
   }
 }
+
+.ceylon-nav-prev,
+.ceylon-nav-next {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ceylon-nav-prev:hover,
+.ceylon-nav-next:hover {
+  color: var(--GREY);
+}

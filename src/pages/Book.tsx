@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Book.css'
 
 const base = import.meta.env.BASE_URL
@@ -70,8 +71,7 @@ export default function Book() {
       ))}
 
       <div className="book-nav">
-        <div className="book-nav-prev h2">Previous Case<br />🡰</div>
-        <div className="book-nav-next h2">Next Case<br />🡲</div>
+        <Link to="/mimicries" className="book-nav-prev h2">🡰<br />Previous Case</Link>
       </div>
 
     </div>

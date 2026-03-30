@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Mimicries.css'
 
 const base = import.meta.env.BASE_URL
@@ -33,8 +34,8 @@ export default function Mimicries() {
       </div>
 
       <div className="mimicries-nav">
-        <div className="mimicries-nav-prev h2">Previous Case<br />🡰</div>
-        <div className="mimicries-nav-next h2">Next Case<br />🡲</div>
+        <Link to="/ustar" className="mimicries-nav-prev h2">🡰<br />Previous Case</Link>
+        <Link to="/book" className="mimicries-nav-next h2">Next Case<br />🡲</Link>
       </div>
 
     </div>
