@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './Book.css'
 
 const base = import.meta.env.BASE_URL
@@ -11,15 +11,26 @@ const images = [
 const overlays = new Set(['book-02', 'book-06', 'book-08'])
 
 export default function Book() {
-  const [overlayOpacity, setOverlayOpacity] = useState(0)
+  const wrapperRefs = useRef<Record<string, HTMLDivElement | null>>({})
+  const [opacities, setOpacities] = useState<Record<string, number>>({
+    'book-02': 0, 'book-06': 0, 'book-08': 0,
+  })
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)
-      const opacity = Math.min(1, Math.max(0, (scrolled - 0.3) / 0.3))
-      setOverlayOpacity(opacity)
+      const vh = window.innerHeight
+      const next: Record<string, number> = {}
+      for (const name of overlays) {
+        const el = wrapperRefs.current[name]
+        if (!el) continue
+        const rect = el.getBoundingClientRect()
+        const progress = (vh - rect.top) / vh
+        next[name] = Math.min(1, Math.max(0, (progress - 0.3) / 0.3))
+      }
+      setOpacities(prev => ({ ...prev, ...next }))
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -39,13 +50,16 @@ export default function Book() {
       {images.slice(1).map(name => (
         <div key={name} className="book-media">
           {overlays.has(name) ? (
-            <div className="book-media-overlay-wrapper">
+            <div
+              ref={el => { wrapperRefs.current[name] = el }}
+              className="book-media-overlay-wrapper"
+            >
               <img src={`${base}book/${name}.webp`} alt="" />
               <img
                 src={`${base}book/${name}-overlay.webp`}
                 alt=""
                 className="book-media-overlay"
-                style={{ opacity: overlayOpacity }}
+                style={{ opacity: opacities[name] ?? 0 }}
               />
             </div>
           ) : (
