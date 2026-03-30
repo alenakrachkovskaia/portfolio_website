@@ -43,6 +43,7 @@ jobs:
         env:
           NODE_ENV: production
           GITHUB_REPOSITORY: ${{ github.repository }}
+          VITE_BASE_PATH: ${{ vars.BASE_PATH }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
