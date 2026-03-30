@@ -28,6 +28,10 @@ export default function Mimicries() {
         </div>
       ))}
 
+      <div className="mimicries-credits">
+        <div className="mimicries-credits-text secondary-tag">[Photographer] Gio Kostava | [Clothes] IERI Store |  [Hair Stylist] Slava Kavtaradze | [Model] Rusiko Tsivtsivadze</div>
+      </div>
+
       <div className="mimicries-nav">
         <div className="mimicries-nav-prev h2">Previous Case<br />🡰</div>
         <div className="mimicries-nav-next h2">Next Case<br />🡲</div>
