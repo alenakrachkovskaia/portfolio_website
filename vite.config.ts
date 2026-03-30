@@ -8,6 +8,6 @@ const basePath = process.env.VITE_BASE_PATH
 export default defineConfig({
   plugins: [react()],
   base: process.env.NODE_ENV === 'production'
-    ? (basePath ?? (repoName ? `/${repoName}/` : '/'))
+    ? (basePath || (repoName ? `/${repoName}/` : '/'))
     : '/',
 })
