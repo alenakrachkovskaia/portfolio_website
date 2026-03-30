@@ -3,7 +3,9 @@ import './Mimicries.css'
 const base = import.meta.env.BASE_URL
 
 const images = [
-  'mimicries-00', 'mimicries-01', 'mimicries-02', 'mimicries-03', 'mimicries-04',
+  'mimicries-01', 'mimicries-02', 'mimicries-03', 'mimicries-04', 'mimicries-05',
+  'mimicries-06', 'mimicries-07', 'mimicries-08', 'mimicries-09', 'mimicries-10',
+  'mimicries-11',
 ]
 
 export default function Mimicries() {
@@ -11,12 +13,12 @@ export default function Mimicries() {
     <div className="mimicries-page">
 
       <div className="mimicries-media">
-        <img src={`${base}mimicries/mimicries-00.webp`} alt="" />
+        <img src={`${base}mimicries/mimicries-01.webp`} alt="" />
       </div>
 
       <div className="mimicries-text">
         <div className="mimicries-text-tag tag">Fashion Photoshoot</div>
-        <p className="mimicries-text-body text">Description text.</p>
+        <p className="mimicries-text-body text">Mimicries is an outdoor fashion editorial exploring the aesthetics of imperfection, the beauty found in human attempts to imitate what nature creates effortlessly. Five looks from showroom IERI were shot across the landscapes of Georgia. Styling, color, and silhouette were chosen to echo each terrain and seamlessly match natural light from afternoon through dusk.</p>
         <div className="mimicries-text-secondary secondary-tag">[Art Direction]  [Production]  [Styling]  [Retouching]</div>
       </div>
 
