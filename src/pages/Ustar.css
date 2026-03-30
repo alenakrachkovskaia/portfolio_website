@@ -25,19 +25,41 @@
   height: auto;
 }
 
-/* ── ALB GRID (7 columns × 6 rows, no gap) ───────────────────────────── */
+/* ── ALB + CYR GRIDS (7 × 6, no gap, CYR overlaid) ─────────────────── */
 
-.ustar-alb-grid {
+.ustar-grid-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.ustar-alb-grid,
+.ustar-cyr-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0;
   width: 100%;
 }
 
-.ustar-alb-grid img {
+.ustar-alb-grid img,
+.ustar-cyr-grid img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.ustar-cyr-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ustar-cyr-grid img {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.ustar-cyr-grid img:hover {
+  opacity: 1;
 }
 
 /* ── TEXT BLOCK ──────────────────────────────────────────────────────── */

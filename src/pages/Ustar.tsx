@@ -12,6 +12,10 @@ const albImages = Array.from({ length: 42 }, (_, i) =>
   `alb-${String(i + 1).padStart(2, '0')}`
 )
 
+const cyrImages = Array.from({ length: 42 }, (_, i) =>
+  `cyr-${String(i + 43).padStart(2, '0')}`
+)
+
 export default function Ustar() {
   return (
     <div className="ustar-page">
@@ -30,10 +34,17 @@ export default function Ustar() {
         <img src={`${base}ustar/ustar-02.webp`} alt="" />
       </div>
 
-      <div className="ustar-alb-grid">
-        {albImages.map(name => (
-          <img key={name} src={`${base}ustar/alb/${name}.webp`} alt="" />
-        ))}
+      <div className="ustar-grid-wrapper">
+        <div className="ustar-alb-grid">
+          {albImages.map(name => (
+            <img key={name} src={`${base}ustar/alb/${name}.webp`} alt="" />
+          ))}
+        </div>
+        <div className="ustar-cyr-grid">
+          {cyrImages.map(name => (
+            <img key={name} src={`${base}ustar/cyr/${name}.webp`} alt="" />
+          ))}
+        </div>
       </div>
 
       {images.slice(2).map(name => (
