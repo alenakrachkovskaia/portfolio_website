@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import fs from 'fs'
 
-// https://vite.dev/config/
+const hasCNAME = fs.existsSync('./public/CNAME')
 const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1]
-const basePath = process.env.VITE_BASE_PATH
 
 export default defineConfig({
   plugins: [react()],
   base: process.env.NODE_ENV === 'production'
-    ? (basePath || (repoName ? `/${repoName}/` : '/'))
+    ? (hasCNAME ? '/' : (repoName ? `/${repoName}/` : '/'))
     : '/',
 })
