@@ -27,7 +27,7 @@ const items: Item[] = [
   { type: 'image', src: `${base}gallery/gallery-18.webp` },
   { type: 'image', src: `${base}gallery/gallery-19.webp` },
   { type: 'image', src: `${base}gallery/gallery-20.webp` },
-  { type: 'image', src: `${base}gallery/gallery-21.gif` },
+  { type: 'image', src: `${base}gallery/gallery-21.webp` },
   { type: 'image', src: `${base}gallery/gallery-22.webp` },
 ]
 
