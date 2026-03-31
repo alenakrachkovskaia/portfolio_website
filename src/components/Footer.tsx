@@ -38,9 +38,9 @@ export default function Footer() {
               <div className="footer-contact-label tag">contact</div>
               <div className="footer-contact-links h2">
                 <a href="mailto:alenkra0@gmail.com">alenkra0@gmail.com</a><br />
-                <a href="https://www.linkedin.com/in/alenakrachkovskaia/" target="_blank" rel="noopener noreferrer">linkedin</a><br />
-                <a href="https://www.instagram.com/alenanaland/" target="_blank" rel="noopener noreferrer">instagram</a><br />
-                <a href="https://www.behance.net/alenanaland" target="_blank" rel="noopener noreferrer">behance</a>
+                <a href="https://www.linkedin.com/in/alenakrachkovskaia/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br />
+                <a href="https://www.instagram.com/alenanaland/" target="_blank" rel="noopener noreferrer">Instagram</a><br />
+                <a href="https://www.behance.net/alenanaland" target="_blank" rel="noopener noreferrer">Behance</a>
               </div>
             </div>
 
