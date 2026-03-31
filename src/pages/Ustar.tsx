@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import LazyImage from '../components/LazyImage'
 import './Ustar.css'
 
 const base = import.meta.env.BASE_URL
@@ -22,7 +23,7 @@ export default function Ustar() {
     <div className="ustar-page">
 
       <div className="ustar-media">
-        <img src={`${base}ustar/ustar-01.webp`} alt="" />
+        <LazyImage src={`${base}ustar/ustar-01.webp`} alt="" />
       </div>
 
       <div className="ustar-text">
@@ -32,25 +33,25 @@ export default function Ustar() {
       </div>
 
       <div className="ustar-media">
-        <img src={`${base}ustar/ustar-02.webp`} alt="" />
+        <LazyImage src={`${base}ustar/ustar-02.webp`} alt="" />
       </div>
 
       <div className="ustar-grid-wrapper">
         <div className="ustar-alb-grid">
           {albImages.map(name => (
-            <img key={name} src={`${base}ustar/alb/${name}.webp`} alt="" />
+            <LazyImage key={name} src={`${base}ustar/alb/${name}.webp`} alt="" />
           ))}
         </div>
         <div className="ustar-cyr-grid">
           {cyrImages.map(name => (
-            <img key={name} src={`${base}ustar/cyr/${name}.webp`} alt="" />
+            <LazyImage key={name} src={`${base}ustar/cyr/${name}.webp`} alt="" />
           ))}
         </div>
       </div>
 
       {images.slice(2).map(name => (
         <div key={name} className="ustar-media">
-          <img src={`${base}ustar/${name}.webp`} alt="" />
+          <LazyImage src={`${base}ustar/${name}.webp`} alt="" />
         </div>
       ))}
 

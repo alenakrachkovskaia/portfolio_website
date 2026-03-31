@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import LazyImage from '../components/LazyImage'
 import './Book.css'
 
 const base = import.meta.env.BASE_URL
@@ -40,7 +41,7 @@ export default function Book() {
     <div className="book-page">
 
       <div className="book-media">
-        <img src={`${base}book/book-00.webp`} alt="" />
+        <LazyImage src={`${base}book/book-00.webp`} alt="" />
       </div>
 
       <div className="book-text">
@@ -56,16 +57,17 @@ export default function Book() {
               ref={el => { wrapperRefs.current[name] = el }}
               className="book-media-overlay-wrapper"
             >
-              <img src={`${base}book/${name}.webp`} alt="" />
+              <LazyImage src={`${base}book/${name}.webp`} alt="" />
               <img
                 src={`${base}book/${name}-overlay.webp`}
                 alt=""
+                loading="lazy"
                 className="book-media-overlay"
                 style={{ opacity: opacities[name] ?? 0 }}
               />
             </div>
           ) : (
-            <img src={`${base}book/${name}.webp`} alt="" />
+            <LazyImage src={`${base}book/${name}.webp`} alt="" />
           )}
         </div>
       ))}

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import LazyImage from '../components/LazyImage'
 import './Ceylon.css'
 
 const base = import.meta.env.BASE_URL
@@ -15,7 +16,7 @@ export default function Ceylon() {
     <div className="ceylon-page">
 
       <div className="ceylon-media">
-        <img src={`${base}ceylon/ceylon-00.webp`} alt="" />
+        <LazyImage src={`${base}ceylon/ceylon-00.webp`} alt="" />
       </div>
 
       <div className="ceylon-text">
@@ -26,7 +27,7 @@ export default function Ceylon() {
 
       {images.slice(1).map(name => (
         <div key={name} className="ceylon-media">
-          <img src={`${base}ceylon/${name === 'ceylon-02' ? `${name}.gif` : `${name}.webp`}`} alt="" />
+          <LazyImage src={`${base}ceylon/${name === 'ceylon-02' ? `${name}.gif` : `${name}.webp`}`} alt="" />
         </div>
       ))}
 

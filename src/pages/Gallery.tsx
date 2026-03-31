@@ -1,3 +1,4 @@
+import LazyImage from '../components/LazyImage'
 import './Gallery.css'
 
 const base = import.meta.env.BASE_URL
@@ -36,7 +37,7 @@ export default function Gallery() {
     <div className="gallery-page">
       {items.map((item, i) =>
         item.type === 'image' ? (
-          <img key={i} src={item.src} alt="" className="gallery-image" />
+          <LazyImage key={i} src={item.src} alt="" className="gallery-image" />
         ) : (
           <div key={i} className="gallery-embed" dangerouslySetInnerHTML={{ __html: item.html }} />
         )

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import LazyImage from '../components/LazyImage'
 import './Skola.css'
 
 const base = import.meta.env.BASE_URL
@@ -15,7 +16,7 @@ export default function Skola() {
     <div className="skola-page">
 
       <div className="skola-media">
-        <img src={`${base}skola/skola-00.webp`} alt="" />
+        <LazyImage src={`${base}skola/skola-00.webp`} alt="" />
       </div>
 
       <div className="skola-text">
@@ -39,7 +40,7 @@ export default function Skola() {
               />
             </div>
           ) : (
-            <img src={`${base}skola/${name}.webp`} alt="" />
+            <LazyImage src={`${base}skola/${name}.webp`} alt="" />
           )}
         </div>
       ))}
