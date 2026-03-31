@@ -10,6 +10,7 @@ import Book from './pages/Book'
 import Info from './pages/Info'
 import Gallery from './pages/Gallery'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import './App.css'
 
 function ScrollToTop() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/book" element={<Book />} />
         <Route path="*" element={<Main />} />
       </Routes>
+      <Footer />
     </Router>
   )
 }

@@ -1,0 +1,81 @@
+/* ── FOOTER ─────────────────────────────────────────────────────────────── */
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background image: full coverage, cropped to fit, never distorted */
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Text layer on top of image */
+.footer-content {
+  position: absolute;
+  inset: 0;
+}
+
+/* Constrain text to 2 central micro-modules (= --module-width, centered) */
+.footer-inner {
+  position: relative;
+  width: var(--module-width);
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* ── 1. Vibe-coded H2 at top ─────────────────────────────────────────── */
+
+.footer-top-text {
+  padding-top: 36px;
+  color: var(--WHITE);
+}
+
+/* ── 2–5. Mid block: top edge at 50% of footer height ───────────────── */
+
+.footer-mid {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+/* Two-column grid: left micro | right micro */
+.footer-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-margin);
+  align-items: baseline;
+}
+
+/* Row 2 spacing below Row 1 */
+.footer-contact-row {
+  margin-top: 36px;
+}
+
+/* ── Color overrides (all footer text is WHITE) ──────────────────────── */
+
+.footer .h2 {
+  color: var(--WHITE);
+}
+
+.footer .tag {
+  color: var(--WHITE);
+}
+
+/* ── Contact links ───────────────────────────────────────────────────── */
+
+.footer-contact-links a {
+  color: var(--WHITE);
+  text-decoration: none;
+}
+
+.footer-contact-links a:hover {
+  color: var(--GREY);
+}
