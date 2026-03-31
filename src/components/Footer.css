@@ -34,7 +34,7 @@
 /* ── 1. Vibe-coded H2 at top ─────────────────────────────────────────── */
 
 .footer-top-text {
-  padding-top: 36px;
+  padding-top: 25vh;
   color: var(--WHITE);
 }
 
