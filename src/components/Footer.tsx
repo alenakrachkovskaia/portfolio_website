@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="footer">
       <img
         className="footer-bg"
-        src={`${base}footer/BACKGROUND.jpg`}
+        src={`${base}footer/BACKGROUND.webp`}
         alt=""
       />
       <div className="footer-content">
