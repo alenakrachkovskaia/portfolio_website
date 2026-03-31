@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import LazyImage from '../components/LazyImage'
 
 // Using public folder paths, which are static
 const letterImages = [
@@ -18,6 +19,13 @@ export default function Main() {
   useEffect(() => {
     document.documentElement.classList.add('main-fixed')
     return () => document.documentElement.classList.remove('main-fixed')
+  }, [])
+
+  useEffect(() => {
+    letterImages.forEach(src => {
+      const img = new Image()
+      img.src = src
+    })
   }, [])
 
   useEffect(() => {
@@ -78,10 +86,11 @@ export default function Main() {
   return (
     <div className="main-container">
       <div className="main-content">
-        <img
+        <LazyImage
           src={letterImages[currentImageIndex]}
           alt="Animated Design"
           className="main-image"
+          loading="eager"
         />
         <p className="main-text h1">
           lena Krachkovskaia is a multidisciplinary designer and art director with a wide range of skills: from typography and branding to media production. Her favorite things in design process are drawing letters and calculating grids.
