@@ -19,7 +19,7 @@
 }
 
 .info-section-1 {
-  padding-bottom: 300px;
+  padding-bottom: 160px;
 }
 
 /* H1 — spans all micros */
@@ -69,6 +69,10 @@
 /* TAG: micro1 · TEXT: micros 2–4 · same row                             */
 
 @media (min-width: 992px) {
+  .info-section-1 {
+    padding-bottom: 240px;
+  }
+
   .info-section {
     grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
   }
