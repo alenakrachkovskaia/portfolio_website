@@ -18,20 +18,20 @@ export default function Info() {
       <div className="info-section info-section-2">
         <div className="info-h1 h1">My favorite things in design process are drawing letters and calculating grids.</div>
         <div className="info-tag tag">
-          brand identity<br />
-          art direction<br />
-          Type Design<br />
-          editorial design<br />
-          packaging design<br />
-          production<br />
-          styling<br />
-          retouching<br />
-          web design<br />
-          Lettering<br />
-          creative coding<br />
-          illustration<br />
-          stop motion animation<br />
-          printed graphics
+          [brand identity]<br />
+          [art direction]<br />
+          [Type Design]<br />
+          [editorial design]<br />
+          [packaging design]<br />
+          [production]<br />
+          [styling]<br />
+          [retouching]<br />
+          [web design]<br />
+          [Lettering]<br />
+          [creative coding]<br />
+          [illustration]<br />
+          [stop motion animation]<br />
+          [printed graphics]
         </div>
         <div className="info-text text">
           <p>My approach revolves around thorough research, which I consider integral to any design project. I believe that meaningful solutions stem from a context established through comprehensive analysis. The development of the graphic system follows the conceptualization phase, which, to me, is the essence of the project.</p>
