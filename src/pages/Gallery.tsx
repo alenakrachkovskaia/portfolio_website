@@ -42,6 +42,7 @@ const items: Item[] = [
   { type: 'image', src: `${base}gallery/gallery-32.webp` },
   { type: 'image', src: `${base}gallery/gallery-33.webp` },
   { type: 'image', src: `${base}gallery/gallery-34.webp` },
+  { type: 'image', src: `${base}gallery/gallery-35.webp` },
 ]
 
 export default function Gallery() {
