@@ -16,7 +16,7 @@
 .main-image {
   position: absolute;
   left: 0;
-  top: calc(2 / 20 * 100vh);
+  bottom: calc(49 / 70 * 100vh - 32px - 0.5vh);
 }
 
 .main-text {
@@ -81,7 +81,7 @@
 
   .main-image {
     left: 0;
-    top: calc(24dvh - 28vw);
+    bottom: calc(100dvh - (16.8 / 70 * 100dvh) - 4.3vw - 0.5dvh);
     width: 40vw;
     height: auto;
   }
