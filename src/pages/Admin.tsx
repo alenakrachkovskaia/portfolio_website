@@ -89,7 +89,7 @@ function LoginScreen({ onLogin }: { onLogin: (token: string) => void }) {
       <h2 style={{ margin: 0 }}>Gallery Admin</h2>
       <input
         type="password"
-        placeholder="GitHub Token"
+        placeholder="Password"
         value={token}
         onChange={e => setToken(e.target.value)}
         onKeyDown={e => e.key === 'Enter' && token && onLogin(token)}
