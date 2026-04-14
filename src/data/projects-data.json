@@ -1,0 +1,192 @@
+{
+  "indexLines": [
+    "[1] — brand identity",
+    "[2] — art direction",
+    "[3] — Type Design",
+    "[4] — editorial design",
+    "[5] — packaging design",
+    "[6] — production",
+    "[7] — styling",
+    "[8] — retouching"
+  ],
+  "projectCards": [
+    {
+      "slug": "skola",
+      "name": "Škola",
+      "services": "[1] [2] [3] [4]",
+      "category": "Culture & Education",
+      "cardImage": "projects/project-1.webp",
+      "route": "/skola"
+    },
+    {
+      "slug": "ceylon",
+      "name": "Ceylon Home",
+      "services": "[1] [2] [5]",
+      "category": "Home Fragrance",
+      "cardImage": "projects/project-2.webp",
+      "route": "/ceylon"
+    },
+    {
+      "slug": "ustar",
+      "name": "Ust’ar",
+      "services": "[1] [2] [3]",
+      "category": "Culture & Education",
+      "cardImage": "projects/project-3.webp",
+      "route": "/ustar"
+    },
+    {
+      "slug": "mimicries",
+      "name": "Mimicries",
+      "services": "[2] [6] [7] [8]",
+      "category": "Fashion Photoshoot",
+      "cardImage": "projects/project-4.webp",
+      "route": "/mimicries"
+    },
+    {
+      "slug": "book",
+      "name": "The Art of Printmaking",
+      "services": "[4]",
+      "category": "PhD Thesis Book",
+      "cardImage": "projects/project-5.webp",
+      "route": "/book"
+    },
+    {
+      "slug": "test",
+      "name": "Test",
+      "services": "[1] [2] [3]",
+      "category": "Test",
+      "cardImage": "projects/cover (1).webp",
+      "route": "/test"
+    }
+  ],
+  "projectPages": {
+    "skola": {
+      "slug": "skola",
+      "pageTag": "Culture & Education",
+      "pageBody": "Škola (meaning \"school\") is an initiative by an art residency that brings together artists and educational institutions through shared programs. A brand was built around the idea of synthesis: the meeting point between the informal and the structured, the intuitive and the precise. At the core of the identity is a custom typeface. It was designed by merging the organic, almost childlike quality of handwritten letterforms with the strict grid of a monospaced typeface. The result is a visual language that feels both familiar and considered, mirroring the project's effort to connect artistic tradition with modern technology.",
+      "pageSecondaryTag": "[Brand Identity]  [Art Direction]  [Type Design]  [Editorial Design]",
+      "images": [
+        "skola-00.webp",
+        "skola-01.webp",
+        "skola-02.webp",
+        "skola-03.webp",
+        "skola-04.webp",
+        "skola-05.webp",
+        "skola-06.webp",
+        "skola-07.webp",
+        "skola-08.webp",
+        "skola-09.webp",
+        "skola-10.webp",
+        "skola-11.webp",
+        "skola-12.webp",
+        "skola-13.webp",
+        "skola-14.webp",
+        "skola-15.webp",
+        "skola-16.webp",
+        "skola-17.webp",
+        "skola-18.webp"
+      ],
+      "videos": {
+        "skola-07": "https://kinescope.io/embed/7MSs9CDpyobatAQmKahnLD",
+        "skola-10": "https://kinescope.io/embed/j12mmne64foZxuhyDBSCaT"
+      }
+    },
+    "ceylon": {
+      "slug": "ceylon",
+      "pageTag": "Home Fragrance",
+      "pageBody": "Ceylon Home is a home fragrance company whose products are rooted in the traditions of Sri Lanka. Brand identity aims to build a sense of origin and journey, the feeling that each product has traveled a great distance to arrive in your home. Every detail of the project was chosen to carry that weight. Each box, each object becomes a small artifact, something that brings the atmosphere of a faraway place into everyday living.",
+      "pageSecondaryTag": "[Brand Identity]  [Art Direction]  [Packaging Design]",
+      "images": [
+        "ceylon-00.webp",
+        "ceylon-01.webp",
+        "ceylon-02.gif",
+        "ceylon-03.webp",
+        "ceylon-04.webp",
+        "ceylon-05.webp",
+        "ceylon-06.webp",
+        "ceylon-07.webp",
+        "ceylon-08.webp",
+        "ceylon-09.webp",
+        "ceylon-10.webp",
+        "ceylon-11.webp",
+        "ceylon-12.webp",
+        "ceylon-13.webp",
+        "ceylon-14.webp",
+        "ceylon-15.webp"
+      ]
+    },
+    "ustar": {
+      "slug": "ustar",
+      "pageTag": "Culture & Education",
+      "pageBody": "Устlар (Lezgian) — master of crafts.\nUst'ar is a project based in Tsmur, Republic of Dagestan, created to bring traditional crafts back into the lives of school students through contemporary workshops. The visual identity was built around the idea that heritage itself is the most powerful message. To express this, an ancient Caucasian Albanian script was studied and reinterpreted, its letterforms became the foundation for a bespoke typeface that works within the modern Lezgian language, bridging Cyrillic with ancient writing culture. The color palette was drawn from Caucasian landscapes, and supporting typeface was chosen to echo the same organic curves found throughout the graphic system.",
+      "pageSecondaryTag": "[brand identity]  [art direction]  [Type Design]",
+      "images": [
+        "ustar-01.webp",
+        "ustar-02.webp",
+        "ustar-04.webp",
+        "ustar-05.webp",
+        "ustar-06.webp",
+        "ustar-07.webp",
+        "ustar-08.webp",
+        "ustar-09.webp",
+        "ustar-10.webp",
+        "ustar-11.webp",
+        "ustar-12.webp",
+        "ustar-13.webp",
+        "ustar-14.webp"
+      ]
+    },
+    "mimicries": {
+      "slug": "mimicries",
+      "pageTag": "Fashion Photoshoot",
+      "pageBody": "Mimicries is an outdoor fashion editorial exploring the aesthetics of imperfection, the beauty found in human attempts to imitate what nature creates effortlessly. Five looks from showroom IERI were shot across the landscapes of Georgia. Styling, color, and silhouette were chosen to echo each terrain and seamlessly match natural light from afternoon through dusk.",
+      "pageSecondaryTag": "[Art Direction]  [Production]  [Styling]  [Retouching]",
+      "images": [
+        "mimicries-01.webp",
+        "mimicries-02.webp",
+        "mimicries-03.webp",
+        "mimicries-04.webp",
+        "mimicries-05.webp",
+        "mimicries-06.webp",
+        "mimicries-07.webp",
+        "mimicries-08.webp",
+        "mimicries-09.webp",
+        "mimicries-10.webp",
+        "mimicries-11.webp"
+      ],
+      "credits": "[Photographer] Gio Kostava | [Clothes] IERI Store |  [Hair Stylist] Slava Kavtaradze | [Model] Rusiko Tsivtsivadze"
+    },
+    "book": {
+      "slug": "book",
+      "pageTag": "PhD Thesis Book",
+      "pageBody": "The Art of Printmaking (Alexey Veselovsky's PhD thesis) traces the history of printmaking through five key techniques, weaving together artworks, illustrations, and personal accounts from figures who shaped the craft. The accompanying publication was designed as a printed book of five chapters, one per technique. The design draws directly from the subject: layouts echo the structure of engraving plates with wide margins, and the color palette is built around copper and ink tones.",
+      "pageSecondaryTag": "[Editorial Design]",
+      "images": [
+        "book-00.webp",
+        "book-01.webp",
+        "book-02.webp",
+        "book-03.webp",
+        "book-04.webp",
+        "book-05.webp",
+        "book-06.webp",
+        "book-07.webp",
+        "book-08.webp",
+        "book-09.webp",
+        "book-10.webp",
+        "book-11.webp"
+      ],
+      "overlayImages": [
+        "book-02",
+        "book-06",
+        "book-08"
+      ]
+    },
+    "test": {
+      "slug": "test",
+      "pageTag": "Test",
+      "pageBody": "",
+      "pageSecondaryTag": "",
+      "images": []
+    }
+  }
+}
