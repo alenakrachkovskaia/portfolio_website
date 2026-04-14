@@ -18,9 +18,27 @@ const cyrImages = Array.from({ length: 42 }, (_, i) =>
   `cyr-${String(i + 43).padStart(2, '0')}`
 )
 
+function UstarGrid() {
+  return (
+    <div className="ustar-grid-wrapper">
+      <div className="ustar-alb-grid">
+        {albImages.map(name => (
+          <LazyImage key={name} src={`${base}ustar/alb/${name}.webp`} alt="" />
+        ))}
+      </div>
+      {/* Plain <img> — LazyImage's inline opacity:1 would override the CSS
+          hover rule that keeps CYR images hidden until hovered */}
+      <div className="ustar-cyr-grid">
+        {cyrImages.map(name => (
+          <img key={name} src={`${base}ustar/cyr/${name}.webp`} alt="" loading="lazy" />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Ustar() {
-  // images[0] = hero, images[1] = shown before grid, images.slice(2) = after grid
-  const [hero, second, ...afterGrid] = data.images
+  const [hero, ...rest] = data.images
   return (
     <div className="ustar-page">
 
@@ -38,30 +56,15 @@ export default function Ustar() {
         <div className="ustar-text-secondary secondary-tag">{data.pageSecondaryTag}</div>
       </div>
 
-      {second && (
-        <div className="ustar-media">
-          <LazyImage src={`${base}ustar/${second}`} alt="" />
-        </div>
+      {rest.map(filename =>
+        filename === '__grid__' ? (
+          <UstarGrid key="__grid__" />
+        ) : (
+          <div key={filename} className="ustar-media">
+            <LazyImage src={`${base}ustar/${filename}`} alt="" />
+          </div>
+        )
       )}
-
-      <div className="ustar-grid-wrapper">
-        <div className="ustar-alb-grid">
-          {albImages.map(name => (
-            <LazyImage key={name} src={`${base}ustar/alb/${name}.webp`} alt="" />
-          ))}
-        </div>
-        <div className="ustar-cyr-grid">
-          {cyrImages.map(name => (
-            <LazyImage key={name} src={`${base}ustar/cyr/${name}.webp`} alt="" />
-          ))}
-        </div>
-      </div>
-
-      {afterGrid.map(filename => (
-        <div key={filename} className="ustar-media">
-          <LazyImage src={`${base}ustar/${filename}`} alt="" />
-        </div>
-      ))}
 
       <div className="ustar-nav">
         {prevCard && <Link to={prevCard.route} className="ustar-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>}

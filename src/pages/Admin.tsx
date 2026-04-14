@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import defaultProjectsData from '../data/projects-data.json'
 
 const REPO = 'alenakrachkovskaia/portfolio_website'
 const GALLERY_FILE = 'src/pages/Gallery.tsx'
@@ -417,11 +418,18 @@ function ProjectsAdmin({ token }: { token: string }) {
         const res = await fetch(`${API}/repos/${REPO}/contents/${PROJECTS_FILE}`, {
           headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' }
         })
-        if (!res.ok) throw new Error(`GitHub API ${res.status}: ${res.statusText}`)
-        const file = await res.json()
-        const decoded = decodeBase64(file.content)
-        const parsed: ProjectsData = JSON.parse(decoded)
-        setFileSha(file.sha)
+        let parsed: ProjectsData
+        if (res.status === 404) {
+          // File doesn't exist on GitHub yet — bootstrap from the bundled data
+          parsed = defaultProjectsData as unknown as ProjectsData
+          setFileSha('')
+        } else {
+          if (!res.ok) throw new Error(`GitHub API ${res.status}: ${res.statusText}`)
+          const file = await res.json()
+          const decoded = decodeBase64(file.content)
+          parsed = JSON.parse(decoded)
+          setFileSha(file.sha)
+        }
         setData(parsed)
         setOriginalData(parsed)
         if (parsed.projectCards.length > 0) setSelectedSlug(parsed.projectCards[0].slug)
@@ -452,7 +460,7 @@ function ProjectsAdmin({ token }: { token: string }) {
         body: JSON.stringify({
           message: 'Update projects data',
           content: encodeBase64(json),
-          sha: fileSha,
+          ...(fileSha ? { sha: fileSha } : {}),
         })
       })
       if (!res.ok) {
@@ -884,16 +892,35 @@ function ProjectPagesSection({ data, setData, busy, setBusy, token, setPublishSt
             border: '1px solid #ddd', borderRadius: 5, padding: 8, background: '#fafafa'
           }}>
             <div style={{ width: 120, flexShrink: 0 }}>
-              <img
-                src={`${base}${selectedSlug}/${filename}`}
-                alt=""
-                style={{ width: '100%', height: 70, objectFit: 'cover', borderRadius: 3, display: 'block' }}
-                onError={e => { (e.target as HTMLImageElement).style.opacity = '0.2' }}
-              />
+              {filename === '__grid__' ? (
+                // Composite preview: 2×2 sample from the alb grid
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, width: '100%', height: 70, borderRadius: 3, overflow: 'hidden' }}>
+                  {['alb-01', 'alb-02', 'alb-08', 'alb-09'].map(name => (
+                    <img
+                      key={name}
+                      src={`${base}ustar/alb/${name}.webp`}
+                      alt=""
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <img
+                  src={`${base}${selectedSlug}/${filename}`}
+                  alt=""
+                  style={{ width: '100%', height: 70, objectFit: 'cover', borderRadius: 3, display: 'block' }}
+                  onError={e => { (e.target as HTMLImageElement).style.opacity = '0.2' }}
+                />
+              )}
             </div>
             <div style={{ flex: 1, fontSize: 12, color: '#555', wordBreak: 'break-all' }}>
               {i === 0 && <span style={{ background: '#eee', padding: '1px 6px', borderRadius: 3, marginRight: 6, fontSize: 11 }}>hero</span>}
-              {filename}
+              {filename === '__grid__' ? (
+                <span>
+                  <span style={{ background: '#e8f0fe', color: '#1a56db', padding: '1px 6px', borderRadius: 3, marginRight: 6, fontSize: 11 }}>special</span>
+                  Type Design Grid (Albanian ↔ Cyrillic hover overlay)
+                </span>
+              ) : filename}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 3, flexShrink: 0 }}>
               <button onClick={() => moveImage(i, -1)} disabled={i === 0 || busy} style={{ padding: '3px 8px' }}>↑</button>
