@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import LazyImage from '../components/LazyImage'
+import { ArrowLeft, ArrowRight } from '../components/NavArrows'
 import './Ustar.css'
 
 const base = import.meta.env.BASE_URL
@@ -56,8 +57,8 @@ export default function Ustar() {
       ))}
 
       <div className="ustar-nav">
-        <Link to="/ceylon" className="ustar-nav-prev case-nav-prev h2">Previous Case<br /><span className="nav-arrow"></span></Link>
-        <Link to="/mimicries" className="ustar-nav-next case-nav-next h2">Next Case<br /><span className="nav-arrow"></span></Link>
+        <Link to="/ceylon" className="ustar-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>
+        <Link to="/mimicries" className="ustar-nav-next h2">Next Case<br /><ArrowRight /></Link>
       </div>
 
     </div>

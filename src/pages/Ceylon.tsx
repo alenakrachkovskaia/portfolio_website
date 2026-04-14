@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import LazyImage from '../components/LazyImage'
+import { ArrowLeft, ArrowRight } from '../components/NavArrows'
 import './Ceylon.css'
 
 const base = import.meta.env.BASE_URL
@@ -32,8 +33,8 @@ export default function Ceylon() {
       ))}
 
       <div className="ceylon-nav">
-        <Link to="/skola" className="ceylon-nav-prev case-nav-prev h2">Previous Case<br /><span className="nav-arrow"></span></Link>
-        <Link to="/ustar" className="ceylon-nav-next case-nav-next h2">Next Case<br /><span className="nav-arrow"></span></Link>
+        <Link to="/skola" className="ceylon-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>
+        <Link to="/ustar" className="ceylon-nav-next h2">Next Case<br /><ArrowRight /></Link>
       </div>
 
     </div>

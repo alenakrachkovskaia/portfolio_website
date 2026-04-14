@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import LazyImage from '../components/LazyImage'
+import { ArrowRight } from '../components/NavArrows'
 import './Skola.css'
 
 const base = import.meta.env.BASE_URL
@@ -46,7 +47,7 @@ export default function Skola() {
       ))}
 
       <div className="skola-nav">
-        <Link to="/ceylon" className="skola-nav-next case-nav-next h2">Next Case<br /><span className="nav-arrow"></span></Link>
+        <Link to="/ceylon" className="skola-nav-next h2">Next Case<br /><ArrowRight /></Link>
       </div>
 
     </div>

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import LazyImage from '../components/LazyImage'
+import { ArrowLeft } from '../components/NavArrows'
 import './Book.css'
 
 const base = import.meta.env.BASE_URL
@@ -73,7 +74,7 @@ export default function Book() {
       ))}
 
       <div className="book-nav">
-        <Link to="/mimicries" className="book-nav-prev case-nav-prev h2">Previous Case<br /><span className="nav-arrow"></span></Link>
+        <Link to="/mimicries" className="book-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>
       </div>
 
     </div>
