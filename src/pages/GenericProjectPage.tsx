@@ -7,8 +7,9 @@ import './GenericProjectPage.css'
 
 const base = import.meta.env.BASE_URL
 
-export default function GenericProjectPage() {
-  const { slug } = useParams<{ slug: string }>()
+export default function GenericProjectPage({ slug: slugProp }: { slug?: string }) {
+  const { slug: slugParam } = useParams<{ slug: string }>()
+  const slug = slugProp ?? slugParam
   const data = slug ? projectPages[slug] : undefined
 
   if (!data) {

@@ -41,7 +41,7 @@ function App() {
         <Route path="/projects/:slug" element={<GenericProjectPage />} />
         {projectCards
           .filter(c => !['skola', 'ceylon', 'ustar', 'mimicries', 'book'].includes(c.slug))
-          .map(c => <Route key={c.slug} path={c.route} element={<GenericProjectPage />} />)
+          .map(c => <Route key={c.slug} path={c.route} element={<GenericProjectPage slug={c.slug} />} />)
         }
         <Route path="*" element={<Main />} />
       </Routes>
