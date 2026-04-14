@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom'
+import { ArrowRight } from './NavArrows'
 import './Footer.css'
 
 const base = import.meta.env.BASE_URL
@@ -27,7 +28,7 @@ export default function Footer() {
 
             {/* Row 1: arrow (left) + name (right) */}
             <div className="footer-row">
-              <div className="footer-arrow tag">🡺</div>
+              <div className="footer-arrow tag"><ArrowRight /></div>
               <div className="footer-name h2">
                 Alena Krachkovskaia<br />© 2026
               </div>
