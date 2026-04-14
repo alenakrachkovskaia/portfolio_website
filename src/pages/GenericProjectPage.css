@@ -1,0 +1,156 @@
+/* ── GENERIC PROJECT PAGE ─────────────────────────────────────────────── */
+
+.gpp-page {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--WHITE);
+  padding-bottom: 124px;
+}
+
+/* ── MEDIA ───────────────────────────────────────────────────────────── */
+
+.gpp-media {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gpp-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── TEXT BLOCK ──────────────────────────────────────────────────────── */
+
+.gpp-text {
+  display: grid;
+  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  margin-top: 36px;
+  margin-bottom: 64px;
+}
+
+.gpp-text-tag {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.gpp-text-body {
+  grid-column: 2 / 5;
+  grid-row: 2;
+  text-align: left;
+  margin: 0;
+}
+
+.gpp-text-secondary {
+  grid-column: 2 / 5;
+  grid-row: 3;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .gpp-text-body {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .gpp-text {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .gpp-text-body {
+    grid-column: 4 / 9;
+    grid-row: 1;
+  }
+
+  .gpp-text-secondary {
+    grid-column: 4 / 9;
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 1476px) {
+  .gpp-text {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .gpp-text-body {
+    grid-column: 6 / 13;
+    grid-row: 1;
+  }
+
+  .gpp-text-secondary {
+    grid-column: 6 / 13;
+    grid-row: 2;
+  }
+}
+
+/* ── CREDITS ─────────────────────────────────────────────────────────── */
+
+.gpp-credits {
+  display: grid;
+  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.gpp-credits-text {
+  grid-column: 2 / 3;
+}
+
+/* ── CASE NAVIGATION ─────────────────────────────────────────────────── */
+
+.gpp-nav {
+  display: grid;
+  grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  align-items: start;
+  margin-top: 36px;
+}
+
+.gpp-nav-prev {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  text-align: left;
+}
+
+.gpp-nav-next {
+  grid-column: 4 / 5;
+  grid-row: 1;
+  text-align: right;
+}
+
+@media (min-width: 992px) {
+  .gpp-nav {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .gpp-nav-next {
+    grid-column: 8 / 9;
+  }
+}
+
+@media (min-width: 1476px) {
+  .gpp-nav {
+    grid-template-columns: var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin) 1fr var(--grid-margin);
+  }
+
+  .gpp-nav-next {
+    grid-column: 12 / 13;
+  }
+}
+
+.gpp-nav-prev,
+.gpp-nav-next {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.gpp-nav-prev:hover,
+.gpp-nav-next:hover {
+  color: var(--GREY);
+}

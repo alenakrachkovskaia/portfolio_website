@@ -10,6 +10,7 @@ import Book from './pages/Book'
 import Info from './pages/Info'
 import Gallery from './pages/Gallery'
 import Admin from './pages/Admin'
+import GenericProjectPage from './pages/GenericProjectPage'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './App.css'
@@ -36,6 +37,7 @@ function App() {
         <Route path="/mimicries" element={<Mimicries />} />
         <Route path="/book" element={<Book />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/projects/:slug" element={<GenericProjectPage />} />
         <Route path="*" element={<Main />} />
       </Routes>
       <Footer />

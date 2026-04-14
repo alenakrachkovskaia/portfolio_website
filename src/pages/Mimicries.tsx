@@ -1,42 +1,44 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, ArrowRight } from '../components/NavArrows'
+import { projectPages, projectCards } from '../data/projects-data'
 import './Mimicries.css'
 
 const base = import.meta.env.BASE_URL
-
-const images = [
-  'mimicries-01', 'mimicries-02', 'mimicries-03', 'mimicries-04', 'mimicries-05',
-  'mimicries-06', 'mimicries-07', 'mimicries-08', 'mimicries-09', 'mimicries-10',
-  'mimicries-11',
-]
+const data = projectPages['mimicries']
+const cardIdx = projectCards.findIndex(c => c.slug === 'mimicries')
+const prevCard = cardIdx > 0 ? projectCards[cardIdx - 1] : null
+const nextCard = cardIdx < projectCards.length - 1 ? projectCards[cardIdx + 1] : null
 
 export default function Mimicries() {
+  const [hero, ...rest] = data.images
   return (
     <div className="mimicries-page">
 
       <div className="mimicries-media">
-        <img src={`${base}mimicries/mimicries-01.webp`} alt="" />
+        <img src={`${base}mimicries/${hero}`} alt="" />
       </div>
 
       <div className="mimicries-text">
-        <div className="mimicries-text-tag tag">Fashion Photoshoot</div>
-        <p className="mimicries-text-body text">Mimicries is an outdoor fashion editorial exploring the aesthetics of imperfection, the beauty found in human attempts to imitate what nature creates effortlessly. Five looks from showroom IERI were shot across the landscapes of Georgia. Styling, color, and silhouette were chosen to echo each terrain and seamlessly match natural light from afternoon through dusk.</p>
-        <div className="mimicries-text-secondary secondary-tag">[Art Direction]  [Production]  [Styling]  [Retouching]</div>
+        <div className="mimicries-text-tag tag">{data.pageTag}</div>
+        <p className="mimicries-text-body text">{data.pageBody}</p>
+        <div className="mimicries-text-secondary secondary-tag">{data.pageSecondaryTag}</div>
       </div>
 
-      {images.slice(1).map(name => (
-        <div key={name} className="mimicries-media">
-          <img src={`${base}mimicries/${name}.webp`} alt="" />
+      {rest.map(filename => (
+        <div key={filename} className="mimicries-media">
+          <img src={`${base}mimicries/${filename}`} alt="" />
         </div>
       ))}
 
-      <div className="mimicries-credits">
-        <div className="mimicries-credits-text secondary-tag">[Photographer] Gio Kostava | [Clothes] IERI Store |  [Hair Stylist] Slava Kavtaradze | [Model] Rusiko Tsivtsivadze</div>
-      </div>
+      {data.credits && (
+        <div className="mimicries-credits">
+          <div className="mimicries-credits-text secondary-tag">{data.credits}</div>
+        </div>
+      )}
 
       <div className="mimicries-nav">
-        <Link to="/ustar" className="mimicries-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>
-        <Link to="/book" className="mimicries-nav-next h2">Next Case<br /><ArrowRight /></Link>
+        {prevCard && <Link to={prevCard.route} className="mimicries-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>}
+        {nextCard && <Link to={nextCard.route} className="mimicries-nav-next h2">Next Case<br /><ArrowRight /></Link>}
       </div>
 
     </div>

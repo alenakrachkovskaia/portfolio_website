@@ -1,40 +1,39 @@
 import { Link } from 'react-router-dom'
 import LazyImage from '../components/LazyImage'
 import { ArrowLeft, ArrowRight } from '../components/NavArrows'
+import { projectPages, projectCards } from '../data/projects-data'
 import './Ceylon.css'
 
 const base = import.meta.env.BASE_URL
-
-const images = [
-  'ceylon-00', 'ceylon-01', 'ceylon-02', 'ceylon-03', 'ceylon-04',
-  'ceylon-05', 'ceylon-06', 'ceylon-07', 'ceylon-08', 'ceylon-09',
-  'ceylon-10', 'ceylon-11', 'ceylon-12', 'ceylon-13', 'ceylon-14',
-  'ceylon-15',
-]
+const data = projectPages['ceylon']
+const cardIdx = projectCards.findIndex(c => c.slug === 'ceylon')
+const prevCard = cardIdx > 0 ? projectCards[cardIdx - 1] : null
+const nextCard = cardIdx < projectCards.length - 1 ? projectCards[cardIdx + 1] : null
 
 export default function Ceylon() {
+  const [hero, ...rest] = data.images
   return (
     <div className="ceylon-page">
 
       <div className="ceylon-media">
-        <LazyImage src={`${base}ceylon/ceylon-00.webp`} alt="" />
+        <LazyImage src={`${base}ceylon/${hero}`} alt="" />
       </div>
 
       <div className="ceylon-text">
-        <div className="ceylon-text-tag tag">Home Fragrance</div>
-        <p className="ceylon-text-body text">Ceylon Home is a home fragrance company whose products are rooted in the traditions of Sri Lanka. Brand identity aims to build a sense of origin and journey, the feeling that each product has traveled a great distance to arrive in your home. Every detail of the project was chosen to carry that weight. Each box, each object becomes a small artifact, something that brings the atmosphere of a faraway place into everyday living.</p>
-        <div className="ceylon-text-secondary secondary-tag">[Brand Identity]  [Art Direction]  [Packaging Design]</div>
+        <div className="ceylon-text-tag tag">{data.pageTag}</div>
+        <p className="ceylon-text-body text">{data.pageBody}</p>
+        <div className="ceylon-text-secondary secondary-tag">{data.pageSecondaryTag}</div>
       </div>
 
-      {images.slice(1).map(name => (
-        <div key={name} className="ceylon-media">
-          <LazyImage src={`${base}ceylon/${name === 'ceylon-02' ? `${name}.gif` : `${name}.webp`}`} alt="" />
+      {rest.map(filename => (
+        <div key={filename} className="ceylon-media">
+          <LazyImage src={`${base}ceylon/${filename}`} alt="" />
         </div>
       ))}
 
       <div className="ceylon-nav">
-        <Link to="/skola" className="ceylon-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>
-        <Link to="/ustar" className="ceylon-nav-next h2">Next Case<br /><ArrowRight /></Link>
+        {prevCard && <Link to={prevCard.route} className="ceylon-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>}
+        {nextCard && <Link to={nextCard.route} className="ceylon-nav-next h2">Next Case<br /><ArrowRight /></Link>}
       </div>
 
     </div>

@@ -1,23 +1,22 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import LazyImage from '../components/LazyImage'
-import { ArrowLeft } from '../components/NavArrows'
+import { ArrowLeft, ArrowRight } from '../components/NavArrows'
+import { projectPages, projectCards } from '../data/projects-data'
 import './Book.css'
 
 const base = import.meta.env.BASE_URL
-
-const images = [
-  'book-00', 'book-01', 'book-02', 'book-03', 'book-04', 'book-05',
-  'book-06', 'book-07', 'book-08', 'book-09', 'book-10', 'book-11',
-]
-
-const overlays = new Set(['book-02', 'book-06', 'book-08'])
+const data = projectPages['book']
+const overlays = new Set(data.overlayImages ?? [])
+const cardIdx = projectCards.findIndex(c => c.slug === 'book')
+const prevCard = cardIdx > 0 ? projectCards[cardIdx - 1] : null
+const nextCard = cardIdx < projectCards.length - 1 ? projectCards[cardIdx + 1] : null
 
 export default function Book() {
   const wrapperRefs = useRef<Record<string, HTMLDivElement | null>>({})
-  const [opacities, setOpacities] = useState<Record<string, number>>({
-    'book-02': 0, 'book-06': 0, 'book-08': 0,
-  })
+  const [opacities, setOpacities] = useState<Record<string, number>>(
+    () => Object.fromEntries((data.overlayImages ?? []).map(name => [name, 0]))
+  )
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,43 +37,48 @@ export default function Book() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const [hero, ...rest] = data.images
   return (
     <div className="book-page">
 
       <div className="book-media">
-        <LazyImage src={`${base}book/book-00.webp`} alt="" />
+        <LazyImage src={`${base}book/${hero}`} alt="" />
       </div>
 
       <div className="book-text">
-        <div className="book-text-tag tag">PhD Thesis Book</div>
-        <p className="book-text-body text">The Art of Printmaking (Alexey Veselovsky's PhD thesis) traces the history of printmaking through five key techniques, weaving together artworks, illustrations, and personal accounts from figures who shaped the craft. The accompanying publication was designed as a printed book of five chapters, one per technique. The design draws directly from the subject: layouts echo the structure of engraving plates with wide margins, and the color palette is built around copper and ink tones.</p>
-        <div className="book-text-secondary secondary-tag">[Editorial Design]</div>
+        <div className="book-text-tag tag">{data.pageTag}</div>
+        <p className="book-text-body text">{data.pageBody}</p>
+        <div className="book-text-secondary secondary-tag">{data.pageSecondaryTag}</div>
       </div>
 
-      {images.slice(1).map(name => (
-        <div key={name} className="book-media">
-          {overlays.has(name) ? (
-            <div
-              ref={el => { wrapperRefs.current[name] = el }}
-              className="book-media-overlay-wrapper"
-            >
-              <LazyImage src={`${base}book/${name}.webp`} alt="" />
-              <img
-                src={`${base}book/${name}-overlay.webp`}
-                alt=""
-                loading="lazy"
-                className="book-media-overlay"
-                style={{ opacity: opacities[name] ?? 0 }}
-              />
-            </div>
-          ) : (
-            <LazyImage src={`${base}book/${name}.webp`} alt="" />
-          )}
-        </div>
-      ))}
+      {rest.map(filename => {
+        const nameBase = filename.replace(/\.[^.]+$/, '')
+        return (
+          <div key={filename} className="book-media">
+            {overlays.has(nameBase) ? (
+              <div
+                ref={el => { wrapperRefs.current[nameBase] = el }}
+                className="book-media-overlay-wrapper"
+              >
+                <LazyImage src={`${base}book/${filename}`} alt="" />
+                <img
+                  src={`${base}book/${nameBase}-overlay.webp`}
+                  alt=""
+                  loading="lazy"
+                  className="book-media-overlay"
+                  style={{ opacity: opacities[nameBase] ?? 0 }}
+                />
+              </div>
+            ) : (
+              <LazyImage src={`${base}book/${filename}`} alt="" />
+            )}
+          </div>
+        )
+      })}
 
       <div className="book-nav">
-        <Link to="/mimicries" className="book-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>
+        {prevCard && <Link to={prevCard.route} className="book-nav-prev h2">Previous Case<br /><ArrowLeft /></Link>}
+        {nextCard && <Link to={nextCard.route} className="book-nav-next h2">Next Case<br /><ArrowRight /></Link>}
       </div>
 
     </div>
