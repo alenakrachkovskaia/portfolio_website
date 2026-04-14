@@ -11,6 +11,7 @@ import Info from './pages/Info'
 import Gallery from './pages/Gallery'
 import Admin from './pages/Admin'
 import GenericProjectPage from './pages/GenericProjectPage'
+import { projectCards } from './data/projects-data'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './App.css'
@@ -38,6 +39,10 @@ function App() {
         <Route path="/book" element={<Book />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/projects/:slug" element={<GenericProjectPage />} />
+        {projectCards
+          .filter(c => !['skola', 'ceylon', 'ustar', 'mimicries', 'book'].includes(c.slug))
+          .map(c => <Route key={c.slug} path={c.route} element={<GenericProjectPage />} />)
+        }
         <Route path="*" element={<Main />} />
       </Routes>
       <Footer />
