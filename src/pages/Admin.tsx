@@ -449,6 +449,12 @@ function ProjectsAdmin({ token }: { token: string }) {
     setBusy(true)
     setPublishStatus(null)
     try {
+      // Always fetch the latest SHA before writing to avoid stale-SHA conflicts
+      const headRes = await fetch(`${API}/repos/${REPO}/contents/${PROJECTS_FILE}`, {
+        headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' }
+      })
+      const currentSha = headRes.ok ? (await headRes.json()).sha : fileSha || undefined
+
       const json = JSON.stringify(data, null, 2) + '\n'
       const res = await fetch(`${API}/repos/${REPO}/contents/${PROJECTS_FILE}`, {
         method: 'PUT',
@@ -460,7 +466,7 @@ function ProjectsAdmin({ token }: { token: string }) {
         body: JSON.stringify({
           message: 'Update projects data',
           content: encodeBase64(json),
-          ...(fileSha ? { sha: fileSha } : {}),
+          ...(currentSha ? { sha: currentSha } : {}),
         })
       })
       if (!res.ok) {
