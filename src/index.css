@@ -70,3 +70,38 @@ body {
 #root {
   width: 100%;
 }
+
+/* ── CASE NAVIGATION ARROWS ──────────────────────────────────────────── */
+
+.nav-arrow {
+  display: inline-block;
+  position: relative;
+  width: 1.4em;
+  height: 0.12em;
+  background: currentColor;
+  vertical-align: middle;
+}
+
+.case-nav-prev .nav-arrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-30%, -50%) rotate(45deg);
+  width: 0.4em;
+  height: 0.4em;
+  border-left: 0.12em solid currentColor;
+  border-bottom: 0.12em solid currentColor;
+}
+
+.case-nav-next .nav-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(30%, -50%) rotate(-45deg);
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.12em solid currentColor;
+  border-bottom: 0.12em solid currentColor;
+}
