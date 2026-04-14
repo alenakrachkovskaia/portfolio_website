@@ -332,7 +332,7 @@ function AdminUI({ token, onSignOut }: { token: string; onSignOut: () => void })
       </div>
 
       {showAddImage && (
-        <AddImageModal token={token} onAdd={onAddImage} onClose={() => setShowAddImage(false)} busy={busy} setBusy={setBusy} />
+        <AddImageModal token={token} onAdd={onAddImage} onClose={() => setShowAddImage(false)} setBusy={setBusy} />
       )}
       {showAddVideo && (
         <AddVideoModal onAdd={onAddVideo} onClose={() => setShowAddVideo(false)} />
@@ -343,11 +343,10 @@ function AdminUI({ token, onSignOut }: { token: string; onSignOut: () => void })
 
 // ── Add Image Modal ───────────────────────────────────────────────────────────
 
-function AddImageModal({ token, onAdd, onClose, busy, setBusy }: {
+function AddImageModal({ token, onAdd, onClose, setBusy }: {
   token: string
   onAdd: (item: GalleryItem) => void
   onClose: () => void
-  busy: boolean
   setBusy: (b: boolean) => void
 }) {
   const [file, setFile] = useState<File | null>(null)
