@@ -34,8 +34,8 @@ export default function Mimicries() {
       </div>
 
       <div className="mimicries-nav">
-        <Link to="/ustar" className="mimicries-nav-prev h2">Previous Case<br />🡰</Link>
-        <Link to="/book" className="mimicries-nav-next h2">Next Case<br />🡲</Link>
+        <Link to="/ustar" className="mimicries-nav-prev h2">Previous Case<br />←</Link>
+        <Link to="/book" className="mimicries-nav-next h2">Next Case<br />→</Link>
       </div>
 
     </div>

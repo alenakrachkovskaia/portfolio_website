@@ -73,7 +73,7 @@ export default function Book() {
       ))}
 
       <div className="book-nav">
-        <Link to="/mimicries" className="book-nav-prev h2">Previous Case<br />🡰</Link>
+        <Link to="/mimicries" className="book-nav-prev h2">Previous Case<br />←</Link>
       </div>
 
     </div>

@@ -32,8 +32,8 @@ export default function Ceylon() {
       ))}
 
       <div className="ceylon-nav">
-        <Link to="/skola" className="ceylon-nav-prev h2">Previous Case<br />🡰</Link>
-        <Link to="/ustar" className="ceylon-nav-next h2">Next Case<br />🡲</Link>
+        <Link to="/skola" className="ceylon-nav-prev h2">Previous Case<br />←</Link>
+        <Link to="/ustar" className="ceylon-nav-next h2">Next Case<br />→</Link>
       </div>
 
     </div>

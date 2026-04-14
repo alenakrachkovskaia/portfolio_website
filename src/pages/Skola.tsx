@@ -46,7 +46,7 @@ export default function Skola() {
       ))}
 
       <div className="skola-nav">
-        <Link to="/ceylon" className="skola-nav-next h2">Next Case<br />🡲</Link>
+        <Link to="/ceylon" className="skola-nav-next h2">Next Case<br />→</Link>
       </div>
 
     </div>
