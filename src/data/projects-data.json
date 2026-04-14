@@ -188,7 +188,8 @@
       "pageBody": "Test test test",
       "pageSecondaryTag": "[Brand Identity] [Art Direction] [Packaging Design]",
       "images": [
-        "cover (1).webp"
+        "cover (1).webp",
+        "test-2.webp"
       ]
     }
   }
