@@ -185,9 +185,12 @@
     "test": {
       "slug": "test",
       "pageTag": "Test test",
-      "pageBody": "",
-      "pageSecondaryTag": "",
-      "images": []
+      "pageBody": "Test test test",
+      "pageSecondaryTag": "[test]",
+      "images": [
+        "test-1.webp",
+        "test-2.webp"
+      ]
     }
   }
 }
