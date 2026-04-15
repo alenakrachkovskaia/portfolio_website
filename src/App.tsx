@@ -11,7 +11,7 @@ import Info from './pages/Info'
 import Gallery from './pages/Gallery'
 import Admin from './pages/Admin'
 import GenericProjectPage from './pages/GenericProjectPage'
-import { projectCards } from './data/projects-data'
+import { useProjectsData } from './data/useProjectsData'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './App.css'
@@ -23,6 +23,7 @@ function ScrollToTop() {
 }
 
 function App() {
+  const { projectCards } = useProjectsData()
   return (
     <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />

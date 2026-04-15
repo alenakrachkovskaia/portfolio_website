@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import LazyImage from '../components/LazyImage'
-import { indexLines, projectCards } from '../data/projects-data'
+import { useProjectsData } from '../data/useProjectsData'
 import './Projects.css'
 
 const base = import.meta.env.BASE_URL
 
 function Projects() {
+  const { indexLines, projectCards } = useProjectsData()
   return (
     <div className="projects-container">
       <div className="projects-content">

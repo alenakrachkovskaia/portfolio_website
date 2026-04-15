@@ -2,12 +2,13 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import LazyImage from '../components/LazyImage'
 import { ArrowLeft, ArrowRight } from '../components/NavArrows'
-import { projectPages, projectCards } from '../data/projects-data'
+import { useProjectsData } from '../data/useProjectsData'
 import './GenericProjectPage.css'
 
 const base = import.meta.env.BASE_URL
 
 export default function GenericProjectPage({ slug: slugProp }: { slug?: string }) {
+  const { projectPages, projectCards } = useProjectsData()
   const { slug: slugParam } = useParams<{ slug: string }>()
   const slug = slugProp ?? slugParam
   const data = slug ? projectPages[slug] : undefined
