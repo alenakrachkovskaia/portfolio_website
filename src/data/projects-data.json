@@ -49,14 +49,6 @@
       "category": "PhD Thesis Book",
       "cardImage": "projects/project-5.webp",
       "route": "/book"
-    },
-    {
-      "slug": "test",
-      "name": "Test",
-      "services": "[1] [2] [3]",
-      "category": "Test",
-      "cardImage": "projects/cover (1).webp",
-      "route": "/test"
     }
   ],
   "projectPages": {
@@ -180,16 +172,6 @@
         "book-02",
         "book-06",
         "book-08"
-      ]
-    },
-    "test": {
-      "slug": "test",
-      "pageTag": "Test",
-      "pageBody": "Test test test",
-      "pageSecondaryTag": "[Brand Identity] [Art Direction] [Packaging Design]",
-      "images": [
-        "cover (1).webp",
-        "test-2.webp"
       ]
     }
   }
