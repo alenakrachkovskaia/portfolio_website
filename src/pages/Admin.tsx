@@ -279,6 +279,7 @@ function GalleryAdmin({ token }: { token: string }) {
       setOriginalItems(items)
       setOriginalSource(newSource)
       setPublishStatus('Published! GitHub Actions will redeploy in ~1 minute.')
+      if (import.meta.env.DEV) fetch('/api/git-pull', { method: 'POST' }).catch(() => {})
     } catch (e: any) {
       setPublishStatus(`Error: ${e.message}`)
     } finally {
@@ -477,6 +478,7 @@ function ProjectsAdmin({ token }: { token: string }) {
       setFileSha(result.content.sha)
       setOriginalData(data)
       setPublishStatus('Published! GitHub Actions will redeploy in ~1 minute.')
+      if (import.meta.env.DEV) fetch('/api/git-pull', { method: 'POST' }).catch(() => {})
     } catch (e: any) {
       setPublishStatus(`Error: ${e.message}`)
     } finally {
