@@ -1,4 +1,5 @@
 import './Info.css'
+import ModelViewer from '../components/ModelViewer'
 
 export default function Info() {
   return (
@@ -37,7 +38,18 @@ export default function Info() {
           <p>My approach revolves around thorough research, which I consider integral to any design project. I believe that meaningful solutions stem from a context established through comprehensive analysis. The development of the graphic system follows the conceptualization phase, which, to me, is the essence of the project.</p>
           <p>Recognizing that design is created by people for people, I always emphasize a humanistic approach. While addressing current user needs is crucial, I also advocate for an advanced approach that envisions new experiences.</p>
           <p>My goal extends beyond problem-solving to provide something transformative. My broad-minded personality, fueled by diverse interests in different mediums, empowers me to incorporate unconventional ideas. I am continuously exploring new ways to push the boundaries of design.</p>
+          <p className="info-text-hint">Scroll down to see something cute</p>
         </div>
+      </div>
+
+      <div className="info-section info-section-3">
+        <div className="info-h1 h1">This is my little talisman that lives on my desk. I use it as a fidget toy and spin it to help myself focus. You can spin it with me too.</div>
+      </div>
+
+      <ModelViewer />
+
+      <div className="info-section info-section-4">
+        <div className="info-tag info-tag-solo tag">[ceramic slug] aeyeuoi</div>
       </div>
 
     </div>

@@ -4,7 +4,7 @@
 :root {
   --WHITE: #F8F8F8;
   --BLACK: #212121;
-  --GREY: #777777;
+  --GREY: #bcbcbc;
 
   /* ── Grid system ────────────────────────────────────────────────
      Layouts: base = 2 modules · 4-mod at 992px · 6-mod at 1476px
