@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:fonts.googleapis.com)",
+      "Bash(cp \"D:/_WORK/PERSONAL/portfilio/PROJECTS/PROJECTS_page/PROJECTS \\(1\\).jpg\" \"D:/_WORK/PERSONAL/portfilio/SITE_PROJECT/public/projects/project-1.jpg\")",
+      "Bash(cp \"D:/_WORK/PERSONAL/portfilio/PROJECTS/PROJECTS_page/PROJECTS \\(2\\).jpg\" \"D:/_WORK/PERSONAL/portfilio/SITE_PROJECT/public/projects/project-2.jpg\")",
+      "Bash(cp \"D:/_WORK/PERSONAL/portfilio/PROJECTS/PROJECTS_page/PROJECTS \\(3\\).jpg\" \"D:/_WORK/PERSONAL/portfilio/SITE_PROJECT/public/projects/project-3.jpg\")",
+      "Bash(cp \"D:/_WORK/PERSONAL/portfilio/PROJECTS/PROJECTS_page/PROJECTS \\(4\\).jpg\" \"D:/_WORK/PERSONAL/portfilio/SITE_PROJECT/public/projects/project-4.jpg\")",
+      "Bash(cp \"D:/_WORK/PERSONAL/portfilio/PROJECTS/PROJECTS_page/PROJECTS \\(5\\).jpg\" \"D:/_WORK/PERSONAL/portfilio/SITE_PROJECT/public/projects/project-5.jpg\")",
+      "Bash(cwebp -version)",
+      "Bash(magick -version)",
+      "Bash(ffmpeg -version)",
+      "WebFetch(domain:alenakrachkovskaia.github.io)",
+      "WebFetch(domain:alenana.land)"
+    ]
+  }
+}

@@ -43,7 +43,7 @@ export default function Info() {
       </div>
 
       <div className="info-section info-section-3">
-        <div className="info-h1 h1">This is my little talisman that lives on my desk. I use it as a fidget toy and spin it to help myself focus. You can spin it with me too.</div>
+        <div className="info-h1 h1">This little talisman lives on my desk. I use it as a fidget toy and spin it to help myself focus. You can spin it with me too.</div>
       </div>
 
       <ModelViewer />
