@@ -3,8 +3,8 @@
 .h1 {
   font-family: 'Montagu Slab', serif;
   font-weight: 300;
-  font-size: 36px;
-  line-height: 45px;
+  font-size: clamp(18px, 4.75vw, 36px);
+  line-height: 1.25;
 }
 
 /* ── H2 ──────────────────────────────────────────────────────────────── */
@@ -12,8 +12,8 @@
 .h2 {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: clamp(14px, 2.9vw, 22px);
+  line-height: 1.27;
   letter-spacing: 0.04em;
   color: var(--BLACK);
 }
@@ -34,8 +34,8 @@
 .tag {
   font-family: 'Tag Font', 'Inter Tight', sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: clamp(10px, 1.85vw, 14px);
+  line-height: 1.29;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -45,8 +45,8 @@
 .secondary-tag {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: clamp(10px, 1.85vw, 14px);
+  line-height: 1.29;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--GREY);
@@ -57,37 +57,9 @@
 .text {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: clamp(14px, 2.375vw, 18px);
+  line-height: 1.11;
   letter-spacing: 0.04em;
   color: var(--BLACK);
 }
 
-/* ── Mobile (≤ 768px) ────────────────────────────────────────────────── */
-
-@media (max-width: 768px) {
-  .h1 {
-    font-size: 4.75vw;
-    line-height: 6.175vw;
-  }
-
-  .h2 {
-    font-size: 2.9vw;
-    line-height: 3.65vw;
-  }
-
-  .tag {
-    font-size: 1.85vw;
-    line-height: 2.35vw;
-  }
-
-  .secondary-tag {
-    font-size: 1.85vw;
-    line-height: 2.35vw;
-  }
-
-  .text {
-    font-size: 2.375vw;
-    line-height: 2.6vw;
-  }
-}
