@@ -36,12 +36,12 @@
 
 .nav-logo-link {
   display: block;
-  height: 22px;
+  height: clamp(14px, 3.125vw, 22px);
 }
 
 .nav-logo {
-  width: 22px;
-  height: 22px;
+  width: clamp(14px, 3.125vw, 22px);
+  height: clamp(14px, 3.125vw, 22px);
   filter: brightness(0) invert(1);
   transition: filter 0.2s ease;
 }
@@ -91,15 +91,6 @@
 
   .navbar-inner {
     padding-bottom: 26px;
-  }
-
-  .nav-logo-link {
-    height: 3.54vw;
-  }
-
-  .nav-logo {
-    width: 3.54vw;
-    height: 3.54vw;
   }
 
   .nav-item-container:first-child {
