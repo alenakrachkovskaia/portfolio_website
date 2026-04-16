@@ -133,7 +133,7 @@
 }
 
 .model-viewer-canvas-wrapper {
-  width: 90vw;
+  width: 95vw;
   aspect-ratio: 1 / 1;
 }
 
@@ -145,7 +145,7 @@
 
 @media (min-width: 768px) {
   .model-viewer-canvas-wrapper {
-    width: 40vw;
+    width: 45vw;
   }
 }
 
