@@ -36,12 +36,13 @@
 
 .nav-logo-link {
   display: block;
-  height: clamp(14px, 3.125vw, 22px);
+  height: clamp(16px, 3.54vw, 24px);
 }
 
 .nav-logo {
-  width: clamp(14px, 3.125vw, 22px);
-  height: clamp(14px, 3.125vw, 22px);
+  display: block;
+  width: clamp(16px, 3.54vw, 24px);
+  height: clamp(16px, 3.54vw, 24px);
   filter: brightness(0) invert(1);
   transition: filter 0.2s ease;
 }
